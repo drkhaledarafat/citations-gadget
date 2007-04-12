@@ -90,7 +90,7 @@
 			total_citations += citeArray[j]*1;
 		}
 		html += "The total number of citations by " +author+ " is: ";
-		html += "<div class='citno'>" + total_citations + "</span>";
+		html += "<div class='citno'>" + total_citations + "</div>";
 		return;
 	}
 	
@@ -115,10 +115,10 @@
         .citno {
           
         }
-        .input{
+        .author{
           display: inline;
         }
-        .other_input {
+        .other {
           display: inline;
         }
         .submit {
@@ -145,14 +145,18 @@
   <div id="content"></div>
 <!-- </div> //-->
 
-<div class="input">
-  Author:
-  <input type="text" name="inputbox">
+<div class="author">
+  <div class="text">Author:</div>
+  <div class="input">
+    <input type="text" name="inputbox">
+  </div>
 </div>
 
-<div class="other_input">
-  + Other
-  <input type="text" name="other_inputbox">
+<div class="other">
+  <div class="text">+ Other</div>
+  <div class="input">
+    <input type="text" name="other_inputbox">
+  </div>
 </div>
 
 <div class="submit">
