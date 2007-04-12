@@ -101,16 +101,30 @@
  	
 	<style type="text/css">
         <!--
-        html{
+        html, body {
                 background-color: #B1C3D9;
         }
-        .instructions {}
+        .instructions {
+          font-size: 12px;
+          }
         .content_div {}
-        .input{}
-        .other_input {}
-        .submit {}
-        .footer {}
-        .copyright {}
+        .input{
+          display: inline;
+        }
+        .other_input {
+          display: inline;
+        }
+        .submit {
+          margin-top: 5px;
+        }
+        .footer {
+          display: inline;
+          font-size: 10px;
+        }
+        .copyright {
+          display: inline;
+          font-size: 10px;
+        }
         //-->
         </style>
 
@@ -139,11 +153,11 @@
 <div class="footer">
   <a href="http://scholar.google.com" target="_blank">
     scholar.google.com
-  <a>
+  </a>
 </div>
 
 <div class="copyright">
-  <p>Copyright - Jan Feyereisl</p>
+  <a>Copyright - Jan Feyereisl</a>
 </div>
 
 </FORM>
