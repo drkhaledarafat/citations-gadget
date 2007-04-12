@@ -90,7 +90,7 @@
 			total_citations += citeArray[j]*1;
 		}
 		html += "The total number of citations by " +author+ " is: ";
-		html += "<span class='style16'>" + total_citations + "</span>";
+		html += "<div class='cit_no'>" + total_citations + "</span>";
 		return;
 	}
 	
@@ -106,8 +106,15 @@
         }
         .instructions {
           font-size: 12px;
-          }
-        .content_div {}
+          margin-bottom: 10px;
+        }
+        .content {
+          color: yellow;
+          margin-bottom: 10px;
+        }
+        .cit_no {
+          
+        }
         .input{
           display: inline;
         }
@@ -135,7 +142,7 @@
 </div>
 
 <!-- The dynamically generated code is inserted here //-->
-  <div id="content_div"></div>
+  <div id="content"></div>
 <!-- </div> //-->
 
 <div class="input">
