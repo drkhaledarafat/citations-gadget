@@ -116,7 +116,7 @@
           font-style: italics;
         }
         .text {
-          display: inline;
+          
         }        
         .input {
           display: inline;
