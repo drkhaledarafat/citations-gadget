@@ -126,6 +126,9 @@
           display: inline;
           float: right;
         }
+        .clear {
+          clear: both;
+        }
         .submit {
           margin-top: 5px;
           margin-bottom: 10px;
@@ -181,6 +184,8 @@
     </tr>
   </table>
 </div>
+
+<div class="clear"></div>
 
 <div class="submit">
   <input type="button" name="Submit" value="Submit" onClick="queryScholar(this.form)">
