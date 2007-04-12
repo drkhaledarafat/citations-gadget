@@ -49,7 +49,7 @@
 			// This code inserts the dynamically generated html content and displays it
 			html += "</div>";
 	                // Output html in div.
-        	        _gel("content_div").innerHTML = html;
+        	        _gel("content").innerHTML = html;
                 	return;
 		});
 	}
@@ -59,7 +59,7 @@
 	// ----------------------
 	function getCitationCount(responseText, author){
 		if (responseText == null){
-			_gel("content_div").innerHTML = "<i>Invalid data.</i>";
+			_gel("content").innerHTML = "<i>Invalid data.</i>";
 	                alert("There is no data.");
         		return;
                 }
@@ -177,7 +177,7 @@
 </div>
 
 </FORM>
-	<!--<div id="content_div"></div> //-->
+	<!--<div id="content"></div> //-->
     ]]>
   </Content>
 </Module>
