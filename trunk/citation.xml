@@ -117,7 +117,7 @@
           display: inline;
         }
         .text {
-          
+          display: inline;
         }        
         .input {
           display: inline;
@@ -139,7 +139,7 @@
         .copyright {
           display: inline;
           font-size: 10px;
-          margin-left: 12em;          
+          margin-left: 10px;          
         }
         //-->
         </style>
@@ -155,17 +155,37 @@
 <!-- </div> //-->
 
 <div class="author">
-  <div class="text">Author:</div>
-  <div class="input">
-    <input type="text" name="inputbox">
-  </div>
+  <table>
+    <tr>
+      <td>
+        <div class="text">Author:</div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="input">
+          <input type="text" name="inputbox">
+        </div>
+      </td>
+    </tr>
+  </table>
 </div>
 
 <div class="other">
-  <div class="text">+ Other</div>
-  <div class="input">
-    <input type="text" name="other_inputbox">
-  </div>
+  <table>
+    <tr>
+      <td>
+        <div class="text">+ Other</div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="input">
+          <input type="text" name="other_inputbox">
+        </div>
+      </td>
+    </tr>
+  </table>
 </div>
 
 <div class="submit">
