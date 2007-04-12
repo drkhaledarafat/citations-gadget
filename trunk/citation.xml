@@ -116,18 +116,7 @@
           font-style: italic;
           display: inline;
         }
-        .text {
-          display: inline;
-        }        
-        .input {
-          display: inline;
-        }        
-        .author{
-          display: inline;
-        }
-        .other {
-          display: inline;
-        }
+        
         .submit {
           margin-top: 5px;
           margin-bottom: 10px;
