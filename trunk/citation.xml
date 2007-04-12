@@ -116,10 +116,10 @@
           font-style: italics;
         }
         .text {
-          diplay: inline;
+          display: inline;
         }        
         .input {
-          diplay: inline;
+          display: inline;
         }        
         .author{
           display: inline;
