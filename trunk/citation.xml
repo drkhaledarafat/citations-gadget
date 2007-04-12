@@ -153,14 +153,12 @@
   <table>
     <tr>
       <td>
-        <div class="text">Author:</div>
+        Author:
       </td>
     </tr>
     <tr>
       <td>
-        <div class="input">
           <input type="text" name="inputbox">
-        </div>
       </td>
     </tr>
   </table>
@@ -170,14 +168,12 @@
   <table>
     <tr>
       <td>
-        <div class="text">+ Other</div>
+        + Other
       </td>
     </tr>
     <tr>
       <td>
-        <div class="input">
           <input type="text" name="other_inputbox">
-        </div>
       </td>
     </tr>
   </table>
