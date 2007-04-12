@@ -138,23 +138,25 @@
   </tr>
   <tr>
     <td align="center" valign="middle"><div align="left"></div>
+    
       <table width="" height="54" border="0" align="center">
-      <tr>
-        <td><div align="left"><span class="style7"><strong><span class="style11">Author:</span><br>
-          <input type="text" size="15" name="inputbox">
-        </strong></span></div></td>
-	<td><span class="style7"><span class="style11">+ Other terms:</span><br>
-	<div align="right">
-          <input type="text" name="other_inputbox">
-        </strong></span></div></td>
-       </tr>
-       <tr>
-	<td></td>
-	<td><div align="right"><span class="style7">
-              <input type="button" name="Submit" value="Submit" onClick="queryScholar(this.form)">
-        </span></div></td>
-      </tr>
-    </table>
+      
+        <tr>
+          <td><div align="left"><span class="style7"><strong><span class="style11">Author:</span><br>
+            <input type="text" size="15" name="inputbox">
+            </strong></span></div>
+          </td>
+	        <td><span class="style7"><span class="style11">+ Other terms:</span><br>
+	          <div align="right">
+            <input type="text" name="other_inputbox">
+            </strong></span></div>
+          </td>
+         </tr>
+        
+        
+       
+      </table>
+      
     <div align="left"></div></td>
   </tr>
   <tr>
