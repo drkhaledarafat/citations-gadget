@@ -113,9 +113,12 @@
           margin-bottom: 10px;
         }
         .citno {
-          
+          font-style: italics;
         }
         .text {
+          diplay: inline;
+        }        
+        .input {
           diplay: inline;
         }        
         .author{
