@@ -108,7 +108,7 @@
           font-size: 12px;
           margin-bottom: 10px;
         }
-        .sContent {
+        #sContent {
           color: yellow;
           margin-bottom: 10px;
         }
@@ -149,7 +149,7 @@
 </div>
 
 <!-- The dynamically generated code is inserted here //-->
-  <div class="sContent"></div>
+  <div id="sContent"></div>
 <!-- </div> //-->
 
 <div class="author">
