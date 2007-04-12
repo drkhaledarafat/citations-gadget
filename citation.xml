@@ -103,6 +103,7 @@
         <!--
         html, body {
                 background-color: #B1C3D9;
+                margin: 5px;
         }
         .instructions {
           font-size: 12px;
