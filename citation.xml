@@ -115,6 +115,9 @@
         .citno {
           
         }
+        .text {
+          diplay: inline;
+        }        
         .author{
           display: inline;
         }
