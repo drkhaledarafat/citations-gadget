@@ -2,7 +2,7 @@
 <Module>
   <ModulePrefs title="Scholar Citation Counter" scrolling="true"/>
   <Content type="html">
-  
+    <![CDATA[
 
 	<script type="text/javascript">
 
