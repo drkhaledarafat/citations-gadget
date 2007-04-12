@@ -101,72 +101,51 @@
  	
 	<style type="text/css">
         <!--
-        table{
+        html{
                 background-color: #B1C3D9;
         }
-        .style7 {font-size: 12px}
-        .style8 {font-size: 10px; font-family: Verdana, Arial, Helvetica, sans-serif; }
-        .style11 {font-family: Verdana, Arial, Helvetica, sans-serif}
-        .style12 {
-                font-size: 12px;
-                font-family: Verdana, Arial, Helvetica, sans-serif;
-                color: #0066CC;}
-        .style16 {color: #FFFF33}
+        .instructions {}
+        .content_div {}
+        .input{}
+        .other_input {}
+        .submit {}
+        .footer {}
+        .copyright {}
         //-->
         </style>
 
 <FORM NAME="cite" ACTION="" METHOD="GET">
-<table border="0" align="center">
-  <tr>
-    <td>
-    <table width="" border="0">
-      <tr>
-        <td align="center" valign="top" bordercolor="#0066FF" bgcolor="#B1C3D9"><div align="justify"><span class="style8">This gadget counts the total number of citations for the given author returned by Google Scholar!</span>
-          <hr align="center" size="1" noshade class="style8">
-        </div></td>
-      </tr>
-    </table></td>
-  </tr>
-  <tr>
-    <td align="center" valign="middle"><div align="center" class="style12">
 
-	<!-- The dynamically generated code is inserted here //-->
-        <div id="content_div"></div>
- 	<!-- </div> //-->
+<div class="instructions">
+  This gadget counts the total number of citations for the given author returned by Google Scholar!
+</div>
 
-     </td>
-  </tr>
-  <tr>
+<!-- The dynamically generated code is inserted here //-->
+  <div id="content_div"></div>
+<!-- </div> //-->
 
-    <div class="input">
-      <input type="text" size="15" name="inputbox">
-    </div>
-    <div class="other_input">
-      <input type="text" name="other_inputbox">
-    </div>
+<div class="input">
+  <input type="text" name="inputbox">
+</div>
 
-    <div class="submit">
-      <input type="button" name="Submit" value="Submit" onClick="queryScholar(this.form)">
-    </div>
-    
-  </tr>
-  <tr>
-    <td align="center" valign="middle">
-     <table width="" height="50" border="0" align="center">
-       <tr>
-        <td align="left" valign="bottom">
-          <a align="left" class="style8" href="http://scholar.google.com" target="_blank">
-            scholar.google.com
-          <a>
-        </td>
-        <td width="20"></td>
-        <td align="right" valign="bottom">
-           <p align="right" class="style8">Copyright - Jan Feyereisl</p>
-        </td>
-       </tr>
-     </table>
-  </tr>
-</table>
+<div class="other_input">
+  <input type="text" name="other_inputbox">
+</div>
+
+<div class="submit">
+  <input type="button" name="Submit" value="Submit" onClick="queryScholar(this.form)">
+</div>
+
+<div class="footer">
+  <a href="http://scholar.google.com" target="_blank">
+    scholar.google.com
+  <a>
+</div>
+
+<div class="copyright">
+  <p>Copyright - Jan Feyereisl</p>
+</div>
+
 </FORM>
 	<!--<div id="content_div"></div> //-->
     ]]>
