@@ -108,7 +108,10 @@
           font-size: 12px;
           margin-bottom: 10px;
         }
-        
+        .sContent {
+          color: yellow;
+          margin-bottom: 10px;
+        }
         .citno {
           font-style: italic;
           display: inline;
@@ -146,7 +149,7 @@
 </div>
 
 <!-- The dynamically generated code is inserted here //-->
-  <div id="sContent"></div>
+  <div class="sContent"></div>
 <!-- </div> //-->
 
 <div class="author">
