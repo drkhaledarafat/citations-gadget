@@ -6,9 +6,9 @@
   <Content type="html">
     <![CDATA[
 
-    <script src="citGadget.js"></script>
+    <script src="http://citations-gadget.googlecode.com/svn/trunk/citGadget.js"></script>
     
-    <link rel="stylesheet" type="text/css" href="citGadget.css" />
+    <link rel="stylesheet" type="text/css" href="http://citations-gadget.googlecode.com/svn/trunk/citGadget.css" />
 
     <!-- Main part of HTML code //-->
     <FORM NAME="cite" ACTION="" METHOD="GET">
