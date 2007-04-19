@@ -85,5 +85,4 @@ function getCitationCount(responseText, author){
 	html += "<div class='citno'>" + total_citations + "</div>";
 	return;
 }
-
 // ------------------------
