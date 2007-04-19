@@ -1,0 +1,50 @@
+
+html, body {
+    background-color: #B1C3D9;
+    margin: 5px;
+}
+
+.instructions {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+#sContent {
+    color: yellow;
+    margin-bottom: 10px;
+}
+
+.citno {
+    font-style: italic;
+    display: inline;
+}
+
+.author{
+    display: inline;
+    float: left;
+}
+
+.other {
+    display: inline;
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+.submit {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.footer {
+    display: inline;
+    font-size: 10px;          
+}
+
+.copyright {
+    display: inline;
+    font-size: 10px;
+    margin-left: 10px;          
+}

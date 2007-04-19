@@ -6,205 +6,68 @@
   <Content type="html">
     <![CDATA[
 
-	<script type="text/javascript">
+    <script src="citGadget.js">
+    <link rel="stylesheet" type="text/css" href="citGadget.css" />
 
-	/* --------------------------------*/
-	/* Created by Jan Feyereisl - 2006 */
-	/* --------------------------------*/
-	// LIMITATIONS:
-	// This gadget calls Google Scholar in the same fashion as a web-browser would
-	// Suitable Scholar API needs to be first released in order to get a more useful and accurate code
-	// The gadget looks at the first 100 results returned by Scholar and caculates
-	// citations from those by simple string tokenization and the resulting int addition.
-	// The position of the author is not taken into account.
-	// Citation is calculated as long as the searched person is one of the named authors on the paper.
+    <!-- Main part of HTML code //-->
+    <FORM NAME="cite" ACTION="" METHOD="GET">
 
-	// !ISSUE! - When pressing the 'enter' key - wrong operation is performed
-	// !ISSUE! - Assumes that the number of citations per paper does not exceed 9999
-	// !ISSUE! - Only 100 papers can be returned per page and the citation calculation
-	//	     is only done on citations in the first returned page!!
+      <div class="instructions">
+        This gadget counts the total number of citations for the given author returned by Google Scholar!
+      </div>
 
-	// HTML variable to generate html code to be printed out
-	var html = "";
+      <!-- The dynamically generated code is inserted here //-->
+        <div id="sContent"></div>
+      <!-- </div> //-->
 
-	// -----------------------
-	function queryScholar(form){
+      <div class="author">
+        <table>
+          <tr>
+            <td>
+              Author:
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <input type="text" name="inputbox">
+            </td>
+          </tr>
+        </table>
+      </div>
 
-		// HTML variable to generate html code to be printed out
-		html = "";
+      <div class="other">
+        <table>
+          <tr>
+            <td>
+              + Other
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <input type="text" name="other_inputbox">
+            </td>
+          </tr>
+        </table>
+      </div>
 
-		// Variable holding the name of the author to be searched
-	        var author = form.inputbox.value;
-		// Variable which determines the number of returned paper records
-		var ret_results = 100;
-		// Variable which stores other search terms besides the author's name
-		var other = form.other_inputbox.value;
-	  	// Generate correct http request
-	  	var url_to_get = "http://scholar.google.com/scholar?as_q="+other+"&num="+ret_results+"&as_sauthors="+author;
-	
-	  	// Fetch the remote content and call relevant function
+      <div class="clear"></div>
 
-		_IG_FetchContent(url_to_get, function(responseText){
-			getCitationCount(responseText, author);
+      <div class="submit">    
+        <input type="button" name="Submit" value="Submit" onClick="queryScholar(this.form)">
+      </div>
 
-			// This needs to be in here in order to make the result show immediately!
-			// This code inserts the dynamically generated html content and displays it
-			html += "</div>";
-	                // Output html in div.
-        	        _gel("sContent").innerHTML = html;
-                	return;
-		});
-	}
+      <div class="footer">
+        <a href="http://scholar.google.com" target="_blank">
+          scholar.google.com
+        </a>
+      </div>
 
-	// ----------------------
-	// Function to tokenize returned HTML response and sum up the Author's citation count
-	// ----------------------
-	function getCitationCount(responseText, author){
-		if (responseText == null){
-			_gel("sContent").innerHTML = "<i>Invalid data.</i>";
-	                alert("There is no data.");
-        		return;
-                }
-		
-		var cite_exists = 1;
-		var cite_str_len = 14;
-		var len_of_Cite_by_str = 9;
-		var citeArray = new Array();
-		for(var i = 0; cite_exists > 0; i++) 
-		{
-			cite_exists = responseText.search('Cited by');
-			if(cite_exists == -1){
-				//alert("No more citations for given Author!");
-				//return;
-			}else{
-				var tmp_string = responseText.substr(cite_exists, cite_str_len);
-				var end = (tmp_string.indexOf("<")-len_of_Cite_by_str);
-				citeArray[i] = tmp_string.substr(len_of_Cite_by_str, end);
-				responseText = responseText.substr(cite_exists+cite_str_len, responseText.length);
-			}
-		}
+      <div class="copyright">
+        <a>Copyright - Jan Feyereisl</a>
+      </div>
 
-		// Sum up all citations
-		var total_citations = 0;
-		for(var j = 0; j<citeArray.length; j++){
-			// The multiplication by one is a hack to 
-			// convert the string type into a numerical type
-			total_citations += citeArray[j]*1;
-		}
-		html += "The total number of citations by " +author+ " is: ";
-		html += "<div class='citno'>" + total_citations + "</div>";
-		return;
-	}
-	
-	// ------------------------
-	</script>
-
-	<!-- Main part of HTML code //-->
- 	
-	<style type="text/css">
-        <!--
-        html, body {
-                background-color: #B1C3D9;
-                margin: 5px;
-        }
-        .instructions {
-          font-size: 12px;
-          margin-bottom: 10px;
-        }
-        #sContent {
-          color: yellow;
-          margin-bottom: 10px;
-        }
-        .citno {
-          font-style: italic;
-          display: inline;
-        }
-            
-        .author{
-          display: inline;
-          float: left;
-        }
-        .other {
-          display: inline;
-          float: left;
-        }
-        .clear {
-          clear: both;
-        }
-        .submit {
-          margin-top: 5px;
-          margin-bottom: 10px;
-        }
-        .footer {
-          display: inline;
-          font-size: 10px;          
-        }
-        .copyright {
-          display: inline;
-          font-size: 10px;
-          margin-left: 10px;          
-        }
-        //-->
-        </style>
-
-<FORM NAME="cite" ACTION="" METHOD="GET">
-
-<div class="instructions">
-  This gadget counts the total number of citations for the given author returned by Google Scholar!
-</div>
-
-<!-- The dynamically generated code is inserted here //-->
-  <div id="sContent"></div>
-<!-- </div> //-->
-
-<div class="author">
-  <table>
-    <tr>
-      <td>
-        Author:
-      </td>
-    </tr>
-    <tr>
-      <td>
-          <input type="text" name="inputbox">
-      </td>
-    </tr>
-  </table>
-</div>
-
-<div class="other">
-  <table>
-    <tr>
-      <td>
-        + Other
-      </td>
-    </tr>
-    <tr>
-      <td>
-          <input type="text" name="other_inputbox">
-      </td>
-    </tr>
-  </table>
-</div>
-
-<div class="clear"></div>
-
-<div class="submit">
-  <input type="button" name="Submit" value="Submit" onClick="queryScholar(this.form)">
-</div>
-
-<div class="footer">
-  <a href="http://scholar.google.com" target="_blank">
-    scholar.google.com
-  </a>
-</div>
-
-<div class="copyright">
-  <a>Copyright - Jan Feyereisl</a>
-</div>
-
-</FORM>
-	<!--<div id="sContent"></div> //-->
+    </FORM>
+    <!--<div id="sContent"></div> //-->
     ]]>
   </Content>
 </Module>
