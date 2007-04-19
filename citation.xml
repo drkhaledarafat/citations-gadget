@@ -6,7 +6,7 @@
   <Content type="html">
     <![CDATA[
 
-    <script src="citGadget.js">
+    <script src="citGadget.js" />
     <link rel="stylesheet" type="text/css" href="citGadget.css" />
 
     <!-- Main part of HTML code //-->
