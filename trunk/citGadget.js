@@ -47,11 +47,19 @@ function queryScholar(form){
     // Calculate how many pages we need to fetch
     var pages = totalResults/ret_results
     
+    html += "TEST"; 
+    
     for(var i = 0; i < pages; i++)
 	{
 	    html += "Page-"; 
 	    //getCitationCount();
 	}
+    
+    
+    html += "</div>";
+    // Output html in div.
+    _gel("sContent").innerHTML = html;
+    
     /*
 	_IG_FetchContent(url_to_get, function(responseText){
 	    getTotalResultsInfo(responseText);
@@ -91,7 +99,11 @@ function getTotalResultsInfo(gAuthor, gOther){
         var resultPositionPost = responseText.search(post);
         
         // Extract the total number of results returned
-        totalResults = responseText.substr(resultPositionPre + pre.length, resultPositionPost-(resultPositionPre + pre.length));    
+        totalResults = responseText.substr(resultPositionPre + pre.length, resultPositionPost-(resultPositionPre + pre.length));
+        
+        
+        
+        return;
     });
 }
 
