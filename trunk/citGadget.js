@@ -42,11 +42,7 @@ function queryScholar(form){
   	// End of global variables declaration
   	
   	// Fetch Information about total number of results returned by Google
-  	getTotalResultsInfo(gAuthor, gOther);
-    
-    while(totalResults == null){
-        
-    }
+  	getTotalResultsInfo(gAuthor, gOther);       
     
     // Calculate how many pages we need to fetch
     var pages = totalResults/ret_results
@@ -60,8 +56,7 @@ function queryScholar(form){
 	    html += "Page-"; 
 	    //getCitationCount();
 	}
-    
-    
+        
     html += "</div>";
     // Output html in div.
     _gel("sContent").innerHTML = html;
