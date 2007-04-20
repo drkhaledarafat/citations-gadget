@@ -33,8 +33,8 @@ function queryScholar(form){
 	// Convert search string into the correct Google search format 
 	// (e.g. add "+" in-between search terms in order for Boolean operations to work)
   	// TODO !!!!!!!!!!!
-  	var gAuthor = author.replace(" ", "+", "gi");
-  	var gOther = other.replace(" ", "+", "gi");
+  	var gAuthor = author.replace(/ /gi, "+", "gi");
+  	var gOther = other.replace(/ /gi, "+", "gi");
   	
   	// Generate correct http request
   	var url_to_get = "http://scholar.google.com/scholar?as_q="+gOther+"&num="+ret_results+"&as_sauthors="+gAuthor;
