@@ -13,6 +13,7 @@
 // !ISSUE! - Assumes that the number of citations per paper does not exceed 9999
 // !ISSUE! - Only 100 papers can be returned per page and the citation calculation
 //	     is only done on citations in the first returned page!!
+// When using or - the operation has to be in capital letters if in "other" search term box
 
 // HTML variable to generate html code to be printed out
 var html = "";
@@ -32,7 +33,6 @@ function queryScholar(form){
 	
 	// Convert search string into the correct Google search format 
 	// (e.g. add "+" in-between search terms in order for Boolean operations to work)
-  	// TODO !!!!!!!!!!!
   	var gAuthor = author.replace(/ /gi, "+");
   	var gOther = other.replace(/ /gi, "+");
   	
@@ -42,6 +42,7 @@ function queryScholar(form){
   	// Fetch the remote content and call relevant function
 
 	_IG_FetchContent(url_to_get, function(responseText){
+	    getTotalResultsInfo(responseText);
 		getCitationCount(responseText, author);
 
 		// This needs to be in here in order to make the result show immediately!
@@ -51,6 +52,32 @@ function queryScholar(form){
     	        _gel("sContent").innerHTML = html;
             	return;
 	});
+}
+
+// ----------------------
+// Function to fetch vital information for retreiving full citations from multiple pages
+// ----------------------
+function getTotalResultsInfo(responseText){
+    if (responseText == null){
+		_gel("sContent").innerHTML = "<i>Invalid data.</i>";
+                alert("There is no data.");
+    		return;
+            }
+
+    var resultString = 
+
+    // Variables used to find the correct location of the total number of returned results
+    var pre = 'of about <b>'
+    var post = '</b> for <b>';
+    
+    // Locate the place where the total results value is positioned
+    var resultPositionPre = responseText.search(pre);
+    var resultPositionPost = responseText.search(post);
+    
+    // Extract the total number of results returned
+    var totalResults = responseText.substr(resultPositionPre + pre.length, resultPositionPost);
+
+    html += "Total" + totalResults;
 }
 
 // ----------------------
