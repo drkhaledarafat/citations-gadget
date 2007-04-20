@@ -19,7 +19,7 @@
 var html = "";
 
 // Global variable to hold the total number of returned results by Google
-totalResults = "nothing";
+totalResults = null;
 
 // Variable which determines the number of returned paper records
 var ret_results = 100;
@@ -43,7 +43,11 @@ function queryScholar(form){
   	
   	// Fetch Information about total number of results returned by Google
   	getTotalResultsInfo(gAuthor, gOther);
-    alert("main" + totalResults);
+    
+    while(totalResults == null){
+        
+    }
+    
     // Calculate how many pages we need to fetch
     var pages = totalResults/ret_results
     
@@ -102,8 +106,6 @@ function getTotalResultsInfo(gAuthor, gOther){
         
         // Extract the total number of results returned
         totalResults = responseText.substr(resultPositionPre + pre.length, resultPositionPost-(resultPositionPre + pre.length));
-        alert("fetch" +totalResults);        
-        
         return;
     });
 }
