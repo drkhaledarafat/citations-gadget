@@ -88,7 +88,7 @@ function getCitationCount(responseText, author){
 		// convert the string type into a numerical type
 		total_citations += citeArray[j]*1;
 	}
-	html += "The total number of citations by " +author+ " is: ";
+	html += "The total number of citations by " + author + " is: ";
 	html += "<div class='citno'>" + total_citations + "</div>";
 	return;
 }
