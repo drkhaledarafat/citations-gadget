@@ -73,9 +73,9 @@ function getTotalResultsInfo(responseText){
     var resultPositionPost = responseText.search(post);
     
     // Extract the total number of results returned
-    var totalResults = responseText.substr(resultPositionPre + pre.length, resultPositionPost-resultPositionPre);
+    var totalResults = responseText.substr(resultPositionPre + pre.length, resultPositionPost-(resultPositionPre + pre.length));
 
-    html += "Total" + totalResults;
+    html += "Total: " + totalResults + " |";
 }
 
 // ----------------------
