@@ -18,6 +18,12 @@
 // HTML variable to generate html code to be printed out
 var html = "";
 
+// Global variable to hold the total number of returned results by Google
+var totalResults = 0;
+
+// Variable which determines the number of returned paper records
+var ret_results = 100;
+
 // -----------------------
 function queryScholar(form){
 
@@ -25,9 +31,7 @@ function queryScholar(form){
 	html = "";
 
 	// Variable holding the name of the author to be searched
-    var author = form.inputbox.value;
-	// Variable which determines the number of returned paper records
-	var ret_results = 100;
+    var author = form.inputbox.value;	
 	// Variable which stores other search terms besides the author's name
 	var other = form.other_inputbox.value;
 	
@@ -35,12 +39,20 @@ function queryScholar(form){
 	// (e.g. add "+" in-between search terms in order for Boolean operations to work)
   	var gAuthor = author.replace(/ /gi, "+");
   	var gOther = other.replace(/ /gi, "+");
+  	// End of global variables declaration
   	
-  	// Generate correct http request
-  	var url_to_get = "http://scholar.google.com/scholar?as_q="+gOther+"&num="+ret_results+"&as_sauthors="+gAuthor;
-
-  	// Fetch the remote content and call relevant function
-
+  	// Fetch Information about total number of results returned by Google
+  	getTotalResultsInfo(gAuthor, gOther);
+    
+    // Calculate how many pages we need to fetch
+    var pages = totalResults/ret_results
+    
+    for(var i = 0; i < pages; i++)
+	{
+	    html += "Page-"; 
+	    //getCitationCount();
+	}
+    /*
 	_IG_FetchContent(url_to_get, function(responseText){
 	    getTotalResultsInfo(responseText);
 		getCitationCount(responseText, author);
@@ -52,30 +64,35 @@ function queryScholar(form){
     	        _gel("sContent").innerHTML = html;
             	return;
 	});
+	*/
 }
 
 // ----------------------
 // Function to fetch vital information for retreiving full citations from multiple pages
 // ----------------------
-function getTotalResultsInfo(responseText){
-    if (responseText == null){
-		_gel("sContent").innerHTML = "<i>Invalid data.</i>";
-                alert("There is no data.");
-    		return;
-            }
+function getTotalResultsInfo(gAuthor, gOther){    
+	
+    // Generate correct http request
+  	var url_to_get = "http://scholar.google.com/scholar?as_q="+gOther+"&num="+ret_results+"&as_sauthors="+gAuthor;
+  	
+    _IG_FetchContent(url_to_get, function(responseText){
+        if (responseText == null){
+            _gel("sContent").innerHTML = "<i>Invalid data.</i>";
+            alert("There is no data.");
+    	    return;
+        }
 
-    // Variables used to find the correct location of the total number of returned results
-    var pre = 'of about <b>';
-    var post = '</b> for <b>';
-    
-    // Locate the place where the total results value is positioned
-    var resultPositionPre = responseText.search(pre);
-    var resultPositionPost = responseText.search(post);
-    
-    // Extract the total number of results returned
-    var totalResults = responseText.substr(resultPositionPre + pre.length, resultPositionPost-(resultPositionPre + pre.length));
-
-    html += "Total: " + totalResults + " |";
+        // Variables used to find the correct location of the total number of returned results
+        var pre = 'of about <b>';
+        var post = '</b> for <b>';
+        
+        // Locate the place where the total results value is positioned
+        var resultPositionPre = responseText.search(pre);
+        var resultPositionPost = responseText.search(post);
+        
+        // Extract the total number of results returned
+        totalResults = responseText.substr(resultPositionPre + pre.length, resultPositionPost-(resultPositionPre + pre.length));    
+    });
 }
 
 // ----------------------
