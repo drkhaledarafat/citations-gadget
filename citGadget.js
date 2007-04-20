@@ -43,7 +43,7 @@ function queryScholar(form){
   	
   	// Fetch Information about total number of results returned by Google
   	getTotalResultsInfo(gAuthor, gOther);
-    alert(totalResults);
+    alert("main" + totalResults);
     // Calculate how many pages we need to fetch
     var pages = totalResults/ret_results
     
@@ -102,7 +102,7 @@ function getTotalResultsInfo(gAuthor, gOther){
         
         // Extract the total number of results returned
         totalResults = responseText.substr(resultPositionPre + pre.length, resultPositionPost-(resultPositionPre + pre.length));
-        alert(totalResults);        
+        alert("fetch" +totalResults);        
         
         return;
     });
