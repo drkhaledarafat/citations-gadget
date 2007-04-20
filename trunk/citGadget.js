@@ -19,7 +19,7 @@
 var html = "";
 
 // Global variable to hold the total number of returned results by Google
-var totalResults = "";
+totalResults = "";
 
 // Variable which determines the number of returned paper records
 var ret_results = 100;
