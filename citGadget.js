@@ -64,10 +64,8 @@ function getTotalResultsInfo(responseText){
     		return;
             }
 
-    var resultString = 
-
     // Variables used to find the correct location of the total number of returned results
-    var pre = 'of about <b>'
+    var pre = 'of about <b>';
     var post = '</b> for <b>';
     
     // Locate the place where the total results value is positioned
