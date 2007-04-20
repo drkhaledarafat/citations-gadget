@@ -73,7 +73,7 @@ function getTotalResultsInfo(responseText){
     var resultPositionPost = responseText.search(post);
     
     // Extract the total number of results returned
-    var totalResults = responseText.substr(resultPositionPre + pre.length, resultPositionPost);
+    var totalResults = responseText.substr(resultPositionPre + pre.length, resultPositionPost-resultPositionPre);
 
     html += "Total" + totalResults;
 }
