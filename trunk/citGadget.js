@@ -88,7 +88,7 @@ function getTotalResultsInfo(gAuthor, gOther){
         // Calculate how many pages we need to fetch
         var pages = (tResults*1)/ret_results
                 
-        html += "<br>" + tResults;
+        html += "<br>" + tResults+1;
         html += "<br>" + pages;
         
         for(var i = 0; i < pages; i++)
