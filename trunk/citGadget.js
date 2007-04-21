@@ -86,6 +86,7 @@ function getTotalResultsInfo(gAuthor, gOther){
         // Extract the total number of results returned
         var tResults = responseText.substr(resultPositionPre, resultLength);
         // Remove the comma representing thousands - it prevents js to treat the string as a number
+        alert(tResults);
         alert(tResults.search(','));
         while(tResults.search(',') != -1){
             alert('1');
