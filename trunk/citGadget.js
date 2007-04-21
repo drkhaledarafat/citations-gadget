@@ -79,9 +79,9 @@ function getTotalResultsInfo(gAuthor, gOther){
         var post = '</b> for <b>';
         
         // Locate the place where the total results value is positioned
-        var resultPositionPre = responseText.search(pre)+ pre.length;
+        var resultPositionPre = responseText.search(pre) + pre.length;
         var resultPositionPost = responseText.search(post);
-        var resultLength = resultPositionPost-(resultPositionPre + pre.length);
+        var resultLength = resultPositionPost - resultPositionPre;
         
         // Extract the total number of results returned
         var tResults = responseText.substr(resultPositionPre, resultLength);
