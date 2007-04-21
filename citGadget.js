@@ -87,6 +87,7 @@ function getTotalResultsInfo(gAuthor, gOther){
         var tResults = responseText.substr(resultPositionPre, resultLength);
         // Remove the comma representing thousands - it prevents js to treat the string as a number
         while(tResults.search(',') != -1){
+            alert('1');
             tResults = tResults.substr(0, tResults.search(','));
         }
                         
