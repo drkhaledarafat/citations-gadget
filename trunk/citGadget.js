@@ -42,11 +42,7 @@ function queryScholar(form){
   	// End of global variables declaration
   	
   	// Fetch Information about total number of results returned by Google
-  	getTotalResultsInfo(gAuthor, gOther);        
-        
-    html += "</div>";
-    // Output html in div.
-    _gel("sContent").innerHTML = html;
+  	getTotalResultsInfo(gAuthor, gOther);         
     
     /*
 	_IG_FetchContent(url_to_get, function(responseText){
@@ -100,6 +96,11 @@ function getTotalResultsInfo(gAuthor, gOther){
 	        html += "Page-"; 
 	        //getCitationCount();
 	    }
+	    
+	    html += "</div>";
+        // Output html in div.
+        _gel("sContent").innerHTML = html;
+    
     });
 }
 
