@@ -105,7 +105,7 @@ function getTotalResultsInfo(gAuthor, gOther){
         for(var i = 0; i < pages; i++)
 	    {
 	        //html += "Page<br>"; 
-	    //    citePages[i] = getCitationCount(responseText, 'test');
+	        citePages[i] = getCitationCount(responseText, 'test');
 	    }
 	    
 	    alert(citePages.length);
