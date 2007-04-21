@@ -85,23 +85,24 @@ function getTotalResultsInfo(gAuthor, gOther){
         
         // Extract the total number of results returned
         var tResults = responseText.substr(resultPositionPre, resultLength);
-        // Remove the comma representing thousands - it prevents js to treat the string as a number
-        alert(tResults);
-        alert(tResults.search(','));
+        
+        // Remove the comma representing thousands - it prevents js to treat the string as a number       
         while(tResults.search(',') != -1){
-            alert('1');
-            tResults = tResults.substr(0, tResults.search(','));
+            tResults = tResults.substr(0, tResults.search(',')) + tResults.substr(tResults.search(','), tResults.length);
+            alert(tResults);
         }
                         
         // Calculate how many pages we need to fetch
-        var pages = (tResults*1)/ret_results
+        if(tResults > 100){
+            var pages = (tResults)/ret_results;
+        }
                 
         html += "<br>" + tResults;
         html += "<br>" + pages;
         
         for(var i = 0; i < pages; i++)
 	    {
-	        html += "Page-"; 
+	        html += "Page<br>"; 
 	        //getCitationCount();
 	    }
 	    
