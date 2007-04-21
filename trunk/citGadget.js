@@ -42,20 +42,7 @@ function queryScholar(form){
   	// End of global variables declaration
   	
   	// Fetch Information about total number of results returned by Google
-  	getTotalResultsInfo(gAuthor, gOther);       
-    
-    // Calculate how many pages we need to fetch
-    var pages = totalResults/ret_results
-    
-    html += "TEST"; 
-    html += "<br>" + totalResults;
-    html += "<br>" + pages;
-    
-    for(var i = 0; i < pages; i++)
-	{
-	    html += "Page-"; 
-	    //getCitationCount();
-	}
+  	getTotalResultsInfo(gAuthor, gOther);        
         
     html += "</div>";
     // Output html in div.
@@ -101,7 +88,18 @@ function getTotalResultsInfo(gAuthor, gOther){
         
         // Extract the total number of results returned
         totalResults = responseText.substr(resultPositionPre + pre.length, resultPositionPost-(resultPositionPre + pre.length));
-        return;
+        
+        // Calculate how many pages we need to fetch
+        var pages = totalResults/ret_results
+                
+        html += "<br>" + totalResults;
+        html += "<br>" + pages;
+        
+        for(var i = 0; i < pages; i++)
+	    {
+	        html += "Page-"; 
+	        //getCitationCount();
+	    }
     });
 }
 
