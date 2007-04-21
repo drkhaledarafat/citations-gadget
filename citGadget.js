@@ -154,6 +154,6 @@ function getCitationCount(responseText, author){
 //	}
 	//html += "The total number of citations by " + author + " is: ";
 	//html += "<div class='citno'>" + total_citations + "</div>";
-	return citeArray[];
+	return citeArray;
 }
 // ------------------------
