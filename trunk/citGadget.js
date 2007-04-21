@@ -96,7 +96,7 @@ function getTotalResultsInfo(gAuthor, gOther){
         if(tResults > 100){
             var pages = (tResults)/ret_results;
         }
-                
+        alert(pages);
         //html += "<br>" + tResults;
         //html += "<br>" + pages;
         
@@ -105,7 +105,7 @@ function getTotalResultsInfo(gAuthor, gOther){
         for(var i = 0; i < pages; i++)
 	    {
 	        //html += "Page<br>"; 
-	        citePages[i] = getCitationCount(responseText, 'test');
+	    //    citePages[i] = getCitationCount(responseText, 'test');
 	    }
 	    
 	    alert(citePages.length);
