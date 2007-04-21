@@ -79,16 +79,21 @@ function getTotalResultsInfo(gAuthor, gOther){
         var post = '</b> for <b>';
         
         // Locate the place where the total results value is positioned
-        var resultPositionPre = responseText.search(pre);
+        var resultPositionPre = responseText.search(pre)+ pre.length;
         var resultPositionPost = responseText.search(post);
+        var resultLength = resultPositionPost-(resultPositionPre + pre.length);
         
         // Extract the total number of results returned
-        var tResults = responseText.substr(resultPositionPre + pre.length, resultPositionPost-(resultPositionPre + pre.length));
-        
+        var tResults = responseText.substr(resultPositionPre, resultLength);
+        // Remove the comma representing thousands - it prevents js to treat the string as a number
+        while(tResults.search(',') != -1){
+            tResults = tResults.substr(0, tResults.search(',')) + tResults.substr(tResults.search(','), tResults.length-tResults.search(','));
+        }
+                        
         // Calculate how many pages we need to fetch
         var pages = (tResults*1)/ret_results
                 
-        html += "<br>" + tResults+1;
+        html += "<br>" + tResults;
         html += "<br>" + pages;
         
         for(var i = 0; i < pages; i++)
