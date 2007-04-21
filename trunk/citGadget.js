@@ -19,7 +19,7 @@
 var html = "";
 
 // Global variable to hold the total number of returned results by Google
-totalResults = null;
+var totalResults = null;
 
 // Variable which determines the number of returned paper records
 var ret_results = 100;
@@ -83,12 +83,12 @@ function getTotalResultsInfo(gAuthor, gOther){
         var resultPositionPost = responseText.search(post);
         
         // Extract the total number of results returned
-        totalResults = responseText.substr(resultPositionPre + pre.length, resultPositionPost-(resultPositionPre + pre.length));
+        var tResults = responseText.substr(resultPositionPre + pre.length, resultPositionPost-(resultPositionPre + pre.length));
         
         // Calculate how many pages we need to fetch
-        var pages = (totalResults*1)/ret_results
+        var pages = (tResults*1)/ret_results
                 
-        html += "<br>" + totalResults;
+        html += "<br>" + tResults;
         html += "<br>" + pages;
         
         for(var i = 0; i < pages; i++)
