@@ -89,34 +89,44 @@ function getTotalResultsInfo(gAuthor, gOther){
         // Remove the comma representing thousands - it prevents js to treat the string as a number       
         while(tResults.search(',') != -1){
             tResults = tResults.substr(0, tResults.search(',')) + tResults.substr(tResults.search(',')+1, tResults.length);
-            //alert(tResults);
         }
                         
         // Calculate how many pages we need to fetch
         if(tResults > 100){
             var pages = (tResults)/ret_results;
-        }
-        
-        alert(pages);        
+        }        
         
         var citePages = new Array();
         
+        // Fetch all fetchable pages (i.e. fetch 'pages' pages[Google's limit] or 10 pages)
         if(pages < 10){
             for(var i = 0; i < pages; i++)
 	        {
-	            //html += "Page<br>"; 
 	            citePages[i] = getCitationCount(responseText, 'test');
 	        }
         }else{
             for(var i = 0; i < 10; i++)
 	        {
-	            //html += "Page<br>"; 
 	            citePages[i] = getCitationCount(responseText, 'test');
 	        }
 	    }
-	    alert(citePages.length);
 	    
+	    // Calculate the total number of citations from all fetched pages
+	    var total_citations = 0;
+	    
+	    for(var i = 0; i < citePages.length; i++){
+	        var citeArray = citePages[i];
+    	    for(var j = 0; j < citeArray.length; j++){
+		        // The multiplication by one is a hack to convert the string type into a numerical type
+		        total_citations += citeArray[j]*1;
+	        }
+	    }
+	    
+	    // Print out the result to the screen
+	    html += "The total number of citations by " + author + " is: ";
+	    html += "<div class='citno'>" + total_citations + "</div>";	    
 	    html += "</div>";
+        
         // Output html in div.
         _gel("sContent").innerHTML = html;
     
