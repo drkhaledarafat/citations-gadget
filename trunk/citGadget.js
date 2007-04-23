@@ -52,21 +52,7 @@ function queryScholar(form){
   	// End of global variables declaration
   	
   	// Fetch Information about total number of results returned by Google
-  	getTotalResultsInfo(gAuthor, gOther);         
-    
-    /*
-	_IG_FetchContent(url_to_get, function(responseText){
-	    getTotalResultsInfo(responseText);
-		getCitationCount(responseText, author);
-
-		// This needs to be in here in order to make the result show immediately!
-		// This code inserts the dynamically generated html content and displays it
-		html += "</div>";
-                // Output html in div.
-    	        _gel("sContent").innerHTML = html;
-            	return;
-	});
-	*/
+  	getTotalResultsInfo(gAuthor, gOther);
 }
 
 // ----------------------
@@ -103,45 +89,47 @@ function getTotalResultsInfo(gAuthor, gOther){
                         
         // Calculate how many pages we need to fetch
         if(tResults > 100){
-            pages = (tResults)/ret_results;
-        }
+            pages = (tResults)/ret_results;        
         
-        // Fetch all fetchable pages (i.e. fetch 'pages' pages[Google's limit] or 10 pages)
-        if(pages < 10){
-            for(var i = 0; i < pages; i++)
-	        {
-	            start = i * 100;
-                var url_to_get = "http://scholar.google.com/scholar?as_q="+gOther+"&num="+ret_results+"&as_sauthors="+gAuthor+"&start="+start;
-  	
-                _IG_FetchContent(url_to_get, function(responseText1){
-                    if (responseText == null){
-                        _gel("sContent").innerHTML = "<i>Invalid data.</i>";
-                        alert("There is no data.");
-    	                return;
-                    }
-	                citePages[i] = getCitationCount(responseText1);
-	            });
-	        }
-	        done = true;
-        }else{
-            for(var i = 0; i < 10; i++)
-	        {
-	            start = i * 100;
-	            var url_to_get = "http://scholar.google.com/scholar?as_q="+gOther+"&num="+ret_results+"&as_sauthors="+gAuthor+"&start="+start;
-  	
-                _IG_FetchContent(url_to_get, function(responseText2){
-                    if (responseText == null){
-                        _gel("sContent").innerHTML = "<i>Invalid data.</i>";
-                        alert("There is no data.");
-    	                return;
-                    }
-	                citePages[i] = getCitationCount(responseText2);
-	           });
-	        }
-	        done = true;
-	    }	    
+            // Fetch all fetchable pages (i.e. fetch 'pages' pages[Google's limit] or 10 pages)
+            if(pages < 10){
+                for(var i = 0; i < pages; i++)
+	            {
+	                start = i * 100;
+                    var url_to_get = "http://scholar.google.com/scholar?as_q="+gOther+"&num="+ret_results+"&as_sauthors="+gAuthor+"&start="+start;
+      	
+                    _IG_FetchContent(url_to_get, function(responseText1){
+                        if (responseText == null){
+                            _gel("sContent").innerHTML = "<i>Invalid data.</i>";
+                            alert("There is no data.");
+    	                    return;
+                        }
+	                    citePages[i] = getCitationCount(responseText1);
+	                });
+	            }
+	            done = true;
+            }else{
+                for(var i = 0; i < 10; i++)
+	            {
+	                start = i * 100;
+	                var url_to_get = "http://scholar.google.com/scholar?as_q="+gOther+"&num="+ret_results+"&as_sauthors="+gAuthor+"&start="+start;
+      	
+                    _IG_FetchContent(url_to_get, function(responseText2){
+                        if (responseText == null){
+                            _gel("sContent").innerHTML = "<i>Invalid data.</i>";
+                            alert("There is no data.");
+    	                    return;
+                        }
+	                    citePages[i] = getCitationCount(responseText2);
+	               });
+	            }
+	            done = true;
+	        }	    
 
-	    setTimeout("wait()", 3000);
+            // Repeatedly wait until we receive all the results from the fetched pages
+	        setTimeout("wait()", 3000);
+	        
+	    } // End of checking if more than 100 results are returned if(tResults > 100)
     });
 }
 
@@ -156,7 +144,7 @@ function wait(){
 	    
 	    for(var i = 0; i < citePages.length; i++){
 	        var citeArray = citePages[i];
-	        alert(citeArray.length);
+	        alert(citeArray[0]);
     	    for(var j = 0; j < citeArray.length; j++){
 		        // The multiplication by one is a hack to convert the string type into a numerical type
 		        total_citations += citeArray[j]*1;
