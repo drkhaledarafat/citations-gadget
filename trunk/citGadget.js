@@ -134,16 +134,8 @@ function getTotalResultsInfo(gAuthor, gOther){
 	                citePages[i] = getCitationCount(responseText2);
 	           });
 	        }
-	    }
-	    	    
-	    function wait(message){
-	        while(citePages.length < 10 && citePages.length < pages){
-	            alert(message);
-	            setTimeout("wait('citePages.length')", 3000);
-            }
-            return;
-        }
-	    
+	    }	    
+
 	    setTimeout("wait('citePages.length')", 3000);
 	    
 	    // Calculate the total number of citations from all fetched pages
@@ -166,6 +158,14 @@ function getTotalResultsInfo(gAuthor, gOther){
         _gel("sContent").innerHTML = html;
     
     });
+}
+
+function wait(message){
+    while(citePages.length < 10 && citePages.length < pages){
+        alert(message);
+        setTimeout("wait('citePages.length')", 3000);
+    }
+    return;
 }
 
 // ----------------------
