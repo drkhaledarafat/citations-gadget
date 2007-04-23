@@ -267,7 +267,7 @@ function searchKeyUp(evt)
      var keyCode = evt.keyCode;
 
      // figure out which key code goes with which key
-     //alert(evt.keyCode);
+     alert(evt.keyCode);
 
      if(keyCode == 13)
      {
