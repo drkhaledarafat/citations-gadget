@@ -121,7 +121,7 @@ function getTotalResultsInfo(gAuthor, gOther){
                             alert("There is no data.");
     	                    return;
                         }
-                        alert(citePages);
+                        alert(citePages[0]);
                         citePages[i] = getCitationCount(responseText2);
                        // var arr = new Array();
                        // arr = getCitationCount(responseText2);
