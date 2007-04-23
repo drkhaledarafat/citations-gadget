@@ -90,7 +90,10 @@ function getTotalResultsInfo(gAuthor, gOther){
         // Calculate how many pages we need to fetch
         if(tResults > 100){
             pages = (tResults)/ret_results;        
-        
+            
+            // Temporary counter as an array indexer
+            var counter = 0;
+            
             // Fetch all fetchable pages (i.e. fetch 'pages' pages[Google's limit] or 10 pages)
             if(pages < 10){
                 for(var i = 0; i < pages; i++)
@@ -104,13 +107,13 @@ function getTotalResultsInfo(gAuthor, gOther){
                             alert("There is no data.");
     	                    return;
                         }
-	                    citePages[i] = getCitationCount(responseText1);
+	                    citePages[counter++] = getCitationCount(responseText1);
 	                    return;
 	                });
 	            }
 	            done = true;
             }else{
-                for(var i = 0; i < 10;)
+                for(var i = 0; i < 10; i++)
 	            {
 	                start = i * 100;
 	                var url_to_get = "http://scholar.google.com/scholar?as_q="+gOther+"&num="+ret_results+"&as_sauthors="+gAuthor+"&start="+start;
@@ -122,7 +125,7 @@ function getTotalResultsInfo(gAuthor, gOther){
     	                    return;
                         }
                         alert("Iter. " + i + ":" +citePages[0]);
-                        citePages[i++] = getCitationCount(responseText2);
+                        citePages[counter++] = getCitationCount(responseText2);
                        // var arr = new Array();
                        // arr = getCitationCount(responseText2);
 	                   // citePages[i] = arr;
