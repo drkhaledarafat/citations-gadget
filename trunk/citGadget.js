@@ -123,13 +123,8 @@ function getTotalResultsInfo(gAuthor, gOther){
                             _gel("sContent").innerHTML = "<i>Invalid data.</i>";
                             alert("There is no data.");
     	                    return;
-                        }
-                        alert("Iter. " + i + ":" +citePages[0]);
-                        citePages[counter++] = getCitationCount(responseText2);
-                       // var arr = new Array();
-                       // arr = getCitationCount(responseText2);
-	                   // citePages[i] = arr;
-	                    //alert("Getting: " + citePages[0][1]);
+                        }                        
+                        citePages[counter++] = getCitationCount(responseText2);                       
 	                    return;
 	               });
 	            }
@@ -153,8 +148,7 @@ function wait(){
 	    var total_citations = 0;
 	    
 	    for(var i = 0; i < citePages.length; i++){
-	        var citeArray = citePages[i];
-	        alert(citePages);
+	        var citeArray = citePages[i];	        
     	    for(var j = 0; j < citeArray.length; j++){
 		        // The multiplication by one is a hack to convert the string type into a numerical type
 		        total_citations += citeArray[j]*1;
