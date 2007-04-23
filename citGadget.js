@@ -199,7 +199,7 @@ function totalCites(){
     _gel("sContent").innerHTML = html;
     
     // Hide loading icon first
-    document.getElementById('loading').style.display="none";
+    document.getElementById("loading").style.display="none";
 
 }
 
