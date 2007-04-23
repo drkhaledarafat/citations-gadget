@@ -267,9 +267,9 @@ function searchKeyUp(evt)
      var keyCode = evt.keyCode;
 
      // figure out which key code goes with which key
-     alert(evt.keyCode);
+     // alert(evt.keyCode);
 
-     if(keyCode == 13)
+     if(evt.keyCode == 13)
      {
           // do this if it IS the enter key
           queryScholar(this.form);
