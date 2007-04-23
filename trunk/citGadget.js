@@ -38,7 +38,7 @@ var done = false;
 function queryScholar(form){
 
     // Display loading icon first
-    document.getElementByClass('loading').style.display="inline";
+    document.getElementById('loading').style.display="inline";
 
 	// HTML variable to generate html code to be printed out
 	html = "";
@@ -199,7 +199,7 @@ function totalCites(){
     _gel("sContent").innerHTML = html;
     
     // Hide loading icon first
-    document.getElementByClass('loading').style.display="none";
+    document.getElementById('loading').style.display="none";
 
 }
 
