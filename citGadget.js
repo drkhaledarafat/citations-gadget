@@ -40,6 +40,9 @@ function queryScholar(form){
 	// HTML variable to generate html code to be printed out
 	html = "";
 
+    // Clear the array
+    citePages = new Array();
+
 	// Variable holding the name of the author to be searched
     author = form.inputbox.value;	
 	// Variable which stores other search terms besides the author's name
