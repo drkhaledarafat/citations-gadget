@@ -24,6 +24,10 @@ var totalResults = null;
 // Variable which determines the number of returned paper records
 var ret_results = 100;
 
+// Global search variables
+var author = "";
+var other = "";
+
 // -----------------------
 function queryScholar(form){
 
@@ -31,9 +35,9 @@ function queryScholar(form){
 	html = "";
 
 	// Variable holding the name of the author to be searched
-    var author = form.inputbox.value;	
+    author = form.inputbox.value;	
 	// Variable which stores other search terms besides the author's name
-	var other = form.other_inputbox.value;
+	other = form.other_inputbox.value;
 	
 	// Convert search string into the correct Google search format 
 	// (e.g. add "+" in-between search terms in order for Boolean operations to work)
@@ -102,12 +106,12 @@ function getTotalResultsInfo(gAuthor, gOther){
         if(pages < 10){
             for(var i = 0; i < pages; i++)
 	        {
-	            citePages[i] = getCitationCount(responseText, 'test');
+	            citePages[i] = getCitationCount(responseText);
 	        }
         }else{
             for(var i = 0; i < 10; i++)
 	        {
-	            citePages[i] = getCitationCount(responseText, 'test');
+	            citePages[i] = getCitationCount(responseText);
 	        }
 	    }
 	    
@@ -136,7 +140,7 @@ function getTotalResultsInfo(gAuthor, gOther){
 // ----------------------
 // Function to tokenize returned HTML response and sum up the Author's citation count
 // ----------------------
-function getCitationCount(responseText, author){
+function getCitationCount(responseText){
 	if (responseText == null){
 		_gel("sContent").innerHTML = "<i>Invalid data.</i>";
                 alert("There is no data.");
