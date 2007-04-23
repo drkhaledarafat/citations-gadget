@@ -110,7 +110,7 @@ function getTotalResultsInfo(gAuthor, gOther){
 	            }
 	            done = true;
             }else{
-                for(var i = 0; i < 10; i++)
+                for(var i = 0; i < 10;)
 	            {
 	                start = i * 100;
 	                var url_to_get = "http://scholar.google.com/scholar?as_q="+gOther+"&num="+ret_results+"&as_sauthors="+gAuthor+"&start="+start;
@@ -121,8 +121,8 @@ function getTotalResultsInfo(gAuthor, gOther){
                             alert("There is no data.");
     	                    return;
                         }
-                        alert(citePages[0]);
-                        citePages[i] = getCitationCount(responseText2);
+                        alert("Iter. " + i + ":" +citePages[0]);
+                        citePages[i++] = getCitationCount(responseText2);
                        // var arr = new Array();
                        // arr = getCitationCount(responseText2);
 	                   // citePages[i] = arr;
