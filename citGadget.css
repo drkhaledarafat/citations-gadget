@@ -19,9 +19,10 @@ html, body {
     border-bottom: #000000 1px solid;
 }
 
-.citno {
-    font-style: italic;
+.citno
+{
     display: inline;
+    color: red;
 }
 
 .author{
