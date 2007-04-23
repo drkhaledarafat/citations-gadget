@@ -163,7 +163,8 @@ function getTotalResultsInfo(gAuthor, gOther){
 
 function wait(){
     if(done != true){
-        alert("Waiting...: " + citePages.length);
+        // TODO - TEST THIS IF IT EVER OCCURS
+        //alert("Waiting...: " + citePages.length);
         setTimeout("wait()", 3000);
     }else{
         // alert("Done: " + citePages.length);
@@ -206,7 +207,7 @@ function h_index(){
         }
     }
     hArray.sort(sortNumber);
-    alert(hArray);
+    //alert(hArray);
     for(var i = 0; i < hArray.length; i++){
         if(i > hArray[i]){
             return hArray[i-1];
