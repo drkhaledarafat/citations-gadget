@@ -188,7 +188,7 @@ function totalCites(){
     // Print out the result to the screen
     html += "<div class='stats'>Statistics:</div><br />";
     html += "Citations for '<div class='sTerm'>" + author + "</div>' : <div class='citno'>" + total_citations + "</div><br />";
-    html += "Publications: <div class='citno'>" + publications + "</div><br />";
+    html += "Cited Publications: <div class='citno'>" + publications + "</div><br />";
     html += "H-Index: <div class='citno'>" + h_index() + "</div><br />";        
     html += "</div>";
     
@@ -251,3 +251,31 @@ function getCitationCount(responseText){
 	return citeArray;
 }
 // ------------------------
+
+
+var inputBox = document.getElementById("inputbox");
+var otherBox = document.getElementById("other_inputbox");
+
+inputBox.onkeyup = searchKeyUp;
+otherBox.onkeyup = searchKeyUp;
+
+function searchKeyUp(evt)
+{
+     // If it’s Mozilla/FF use evt; else use window.event
+     evt = evt ? evt : event;
+
+     var keyCode = evt.keyCode;
+
+     // figure out which key code goes with which key
+     // alert(evt.keyCode);
+
+     if(keyCode == 13)
+     {
+          // do this if it IS the enter key
+          queryScholar(this.form);
+     }
+     else
+     {
+          // do this if it is NOT the enter key
+     }
+}
