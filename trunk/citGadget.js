@@ -37,6 +37,9 @@ var done = false;
 // -----------------------
 function queryScholar(form){
 
+    // Display loading icon first
+    document.getElementByClass('loading').style.display="inline";
+
 	// HTML variable to generate html code to be printed out
 	html = "";
 
@@ -194,6 +197,10 @@ function totalCites(){
     
     // Output html in div.
     _gel("sContent").innerHTML = html;
+    
+    // Hide loading icon first
+    document.getElementByClass('loading').style.display="none";
+
 }
 
 function h_index(){
@@ -251,13 +258,6 @@ function getCitationCount(responseText){
 	return citeArray;
 }
 // ------------------------
-
-
-//var inputBox = document.getElementById("inputbox");
-//var otherBox = document.getElementById("other_inputbox");
-
-//inputBox.onkeyup = searchKeyUp;
-//otherBox.onkeyup = searchKeyUp;
 
 function searchKeyUp(evt, form)
 {
