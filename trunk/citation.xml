@@ -14,7 +14,7 @@
     <FORM NAME="cite" ACTION="" METHOD="GET">
 
       <div class="instructions">
-        This gadget counts the total number of citations for the given author returned by Google Scholar!
+        A Google Scholar gadget for calculating author citations and other statistical information regarding publications.
       </div>
 
       <!-- The dynamically generated code is inserted here //-->
@@ -65,6 +65,7 @@
       </div>
 
       <div class="copyright">
+        <a href="http://citations-gadget.googlecode.com" target="_blank"> Project Page </a>
         <a>Copyright - Jan Feyereisl</a>
       </div>
 
