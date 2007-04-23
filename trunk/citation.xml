@@ -30,7 +30,7 @@
           </tr>
           <tr>
             <td>
-                <input type="text" name="inputbox" onkeyup="searchKeyUp()">
+                <input type="text" name="inputbox" onkeyup="searchKeyUp">
             </td>
           </tr>
         </table>
@@ -45,7 +45,7 @@
           </tr>
           <tr>
             <td>
-                <input type="text" name="other_inputbox" onkeyup="searchKeyUp()">
+                <input type="text" name="other_inputbox" onkeyup="searchKeyUp">
             </td>
           </tr>
         </table>
