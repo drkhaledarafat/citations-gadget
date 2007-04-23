@@ -96,18 +96,24 @@ function getTotalResultsInfo(gAuthor, gOther){
         if(tResults > 100){
             var pages = (tResults)/ret_results;
         }
-        alert(pages);
-        //html += "<br>" + tResults;
-        //html += "<br>" + pages;
+        
+        alert(pages);        
         
         var citePages = new Array();
         
-        for(var i = 0; i < pages; i++)
-	    {
-	        //html += "Page<br>"; 
-	        citePages[i] = getCitationCount(responseText, 'test');
+        if(pages < 10){
+            for(var i = 0; i < pages; i++)
+	        {
+	            //html += "Page<br>"; 
+	            citePages[i] = getCitationCount(responseText, 'test');
+	        }
+        }else{
+            for(var i = 0; i < 10; i++)
+	        {
+	            //html += "Page<br>"; 
+	            citePages[i] = getCitationCount(responseText, 'test');
+	        }
 	    }
-	    
 	    alert(citePages.length);
 	    
 	    html += "</div>";
