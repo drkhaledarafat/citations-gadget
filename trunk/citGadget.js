@@ -186,13 +186,37 @@ function totalCites(){
     
     // Print out the result to the screen
     html += "<div class='stats'>Statistics:</div><br />";
+    html += "Citations for '<i>" + author + "'<i>:<div class='citno'>" + total_citations + "</div><br />";
     html += "Publications: " + publications + "<br />";
-    html += "Citations for '" + author + "': ";
-    html += "<div class='citno'>" + total_citations + "</div><br />";	    
+    html += "H-Index: " + h_index() + "<br />";        
     html += "</div>";
     
     // Output html in div.
     _gel("sContent").innerHTML = html;
+}
+
+function h_index(){
+    var hArray = new Array();
+    var x = 0;
+    for(var i = 0; i < citePages.length; i++){
+        var citeArray = citePages[i];	        
+	    for(var j = 0; j < citeArray.length; j++){
+	        // The multiplication by one is a hack to convert the string type into a numerical type
+	        hArray[x++] += citeArray[j]*1;
+        }
+    }
+    hArray.sort(sortNumber);
+    alert(hArray);
+    for(var i = 0; i < hArray.length; i++){
+        if(i > hArray[i]){
+            return hArray[i-1];
+        }
+    }
+}
+
+function sortNumber(a,b)
+{
+    return b - a
 }
 
 // ----------------------
