@@ -120,7 +120,10 @@ function getTotalResultsInfo(gAuthor, gOther){
                             alert("There is no data.");
     	                    return;
                         }
-	                    citePages[i] = getCitationCount(responseText2);
+                        var arr = new Array();
+                        arr = getCitationCount(responseText2);
+	                    citePages[i] = arr;
+	                    alert(arr[0]);
 	               });
 	            }
 	            done = true;
@@ -144,7 +147,6 @@ function wait(){
 	    
 	    for(var i = 0; i < citePages.length; i++){
 	        var citeArray = citePages[i];
-	        alert(citeArray[0]);
     	    for(var j = 0; j < citeArray.length; j++){
 		        // The multiplication by one is a hack to convert the string type into a numerical type
 		        total_citations += citeArray[j]*1;
