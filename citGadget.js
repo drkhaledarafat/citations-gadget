@@ -162,10 +162,20 @@ function getTotalResultsInfo(gAuthor, gOther){
 }
 
 function wait(){
-    if(citePages.length < 10 || citePages.length < pages){
-        setTimeout("wait(citePages.length)", 3000);
+    if(pages < 10){
+        if(citePages.length < pages){
+            alert("Waiting...: " + citePages.length);
+            setTimeout("wait()", 3000);
+        }else{
+            alert("Done: " + citePages.length);
+        }
     }else{
-        alert(citePages.length);
+        if(citePages.length < 10){
+            alert("Waiting...: " + citePages.length);
+            setTimeout("wait()", 3000);
+        }else{
+            alert("Done: " + citePages.length);
+        }
     }
     return;
 }
