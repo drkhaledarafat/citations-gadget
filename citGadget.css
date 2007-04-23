@@ -64,6 +64,7 @@ html, body {
 
 .sTerm
 {
+    display: inline;
     font-style: italic;
     color: yellow;
 }
