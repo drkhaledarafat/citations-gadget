@@ -163,8 +163,9 @@ function getTotalResultsInfo(gAuthor, gOther){
 
 function wait(message, pages){
     if(citePages.length < 10 && citePages.length < pages){
-        alert(message);
         setTimeout("wait(citePages.length)", 3000);
+    }else{
+        alert(citePages.length);
     }
     return;
 }
