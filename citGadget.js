@@ -28,6 +28,9 @@ var ret_results = 100;
 var author = "";
 var other = "";
 
+// Needs to be declared global otherwise it doesnt get recognized by the setTimeout() method
+var citePages = new Array();
+
 // -----------------------
 function queryScholar(form){
 
@@ -98,9 +101,7 @@ function getTotalResultsInfo(gAuthor, gOther){
         // Calculate how many pages we need to fetch
         if(tResults > 100){
             var pages = (tResults)/ret_results;
-        }        
-        
-        var citePages = new Array();
+        }
         
         // Fetch all fetchable pages (i.e. fetch 'pages' pages[Google's limit] or 10 pages)
         if(pages < 10){
