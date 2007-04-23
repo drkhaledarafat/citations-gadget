@@ -55,7 +55,7 @@
 
       <div class="submit">    
         <input type="button" name="Submit" value="Submit" onClick="queryScholar(this.form)">
-          <div class="loading"><a href="http://citations-gadget.googlecode.com/svn/trunk/citGadgetLoading.gif"></div>
+          <div id="loading"><a href="http://citations-gadget.googlecode.com/svn/trunk/citGadgetLoading.gif"></div>
       </div>
 
       <div class="footer">

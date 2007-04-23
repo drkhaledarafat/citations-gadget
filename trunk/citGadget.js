@@ -38,7 +38,7 @@ var done = false;
 function queryScholar(form){
 
     // Display loading icon first
-    document.getElementById('loading').style.display="inline";
+    document.getElementById("loading").style.display="inline";
 
 	// HTML variable to generate html code to be printed out
 	html = "";
