@@ -106,7 +106,7 @@ function getTotalResultsInfo(gAuthor, gOther){
         if(pages < 10){
             for(var i = 0; i < pages; i++)
 	        {
-	            start = pages * 100;
+	            start = i * 100;
                 var url_to_get = "http://scholar.google.com/scholar?as_q="+gOther+"&num="+ret_results+"&as_sauthors="+gAuthor+"&start="+start;
   	
                 _IG_FetchContent(url_to_get, function(responseText1){
@@ -121,7 +121,7 @@ function getTotalResultsInfo(gAuthor, gOther){
         }else{
             for(var i = 0; i < 10; i++)
 	        {
-	            start = pages * 100;
+	            start = i * 100;
 	            var url_to_get = "http://scholar.google.com/scholar?as_q="+gOther+"&num="+ret_results+"&as_sauthors="+gAuthor+"&start="+start;
   	
                 _IG_FetchContent(url_to_get, function(responseText2){
