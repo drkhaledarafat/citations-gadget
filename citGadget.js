@@ -253,11 +253,11 @@ function getCitationCount(responseText){
 // ------------------------
 
 
-var inputBox = document.getElementById("inputbox");
-var otherBox = document.getElementById("other_inputbox");
+//var inputBox = document.getElementById("inputbox");
+//var otherBox = document.getElementById("other_inputbox");
 
-inputBox.onkeyup = searchKeyUp;
-otherBox.onkeyup = searchKeyUp;
+//inputBox.onkeyup = searchKeyUp;
+//otherBox.onkeyup = searchKeyUp;
 
 function searchKeyUp(evt)
 {
@@ -267,7 +267,7 @@ function searchKeyUp(evt)
      var keyCode = evt.keyCode;
 
      // figure out which key code goes with which key
-     // alert(evt.keyCode);
+     alert(evt.keyCode);
 
      if(keyCode == 13)
      {
