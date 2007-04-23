@@ -30,8 +30,8 @@ var other = "";
 
 // Needs to be declared global otherwise it doesnt get recognized by the setTimeout() method
 var citePages = new Array();
+var publications = 0;
 var pages = 0;
-
 var done = false;
 
 // -----------------------
@@ -40,8 +40,15 @@ function queryScholar(form){
 	// HTML variable to generate html code to be printed out
 	html = "";
 
-    // Clear the array
+    // Clear global variables for subsequent use
     citePages = new Array();
+    publications = 0;
+    pages = 0;
+    done = false;
+    totalResults = null;
+    ret_results = 100;
+    author = "";
+    other = "";
 
 	// Variable holding the name of the author to be searched
     author = form.inputbox.value;	
@@ -178,6 +185,8 @@ function totalCites(){
     }
     
     // Print out the result to the screen
+    html += "<div class='stat'>Statistics:</div><br>";
+    html += "Publications: " + + "<br>";
     html += "The total number of citations by " + author + " is: ";
     html += "<div class='citno'>" + total_citations + "</div>";	    
     html += "</div>";
@@ -210,6 +219,7 @@ function getCitationCount(responseText){
 			var tmp_string = responseText.substr(cite_exists, cite_str_len);
 			var end = (tmp_string.indexOf("<")-len_of_Cite_by_str);
 			citeArray[i] = tmp_string.substr(len_of_Cite_by_str, end);
+			publications++;
 			responseText = responseText.substr(cite_exists+cite_str_len, responseText.length);
 		}
 	}
