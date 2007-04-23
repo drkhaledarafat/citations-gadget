@@ -29,7 +29,7 @@ var author = "";
 var other = "";
 
 // Needs to be declared global otherwise it doesnt get recognized by the setTimeout() method
-citePages = new Array();
+var citePages = new Array();
 var pages = 0;
 
 var done = false;
@@ -147,7 +147,7 @@ function wait(){
 	    
 	    for(var i = 0; i < citePages.length; i++){
 	        var citeArray = citePages[i];
-	        alert(citePages[1]);
+	        alert(citePages);
     	    for(var j = 0; j < citeArray.length; j++){
 		        // The multiplication by one is a hack to convert the string type into a numerical type
 		        total_citations += citeArray[j]*1;
