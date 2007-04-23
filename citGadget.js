@@ -202,7 +202,7 @@ function h_index(){
         var citeArray = citePages[i];	        
 	    for(var j = 0; j < citeArray.length; j++){
 	        // The multiplication by one is a hack to convert the string type into a numerical type
-	        hArray[x++] += citeArray[j]*1;
+	        hArray[x++] = citeArray[j]*1;
         }
     }
     hArray.sort(sortNumber);
