@@ -116,8 +116,7 @@ function getTotalResultsInfo(gAuthor, gOther){
     	                return;
                     }
 	                citePages[i] = getCitationCount(responseText1);
-	            }
-	            
+	            });	            
 	        }
         }else{
             for(var i = 0; i < 10; i++)
@@ -132,7 +131,7 @@ function getTotalResultsInfo(gAuthor, gOther){
     	                return;
                     }
 	                citePages[i] = getCitationCount(responseText2);
-	            }
+	            });
 	        }
 	    }
 	    
