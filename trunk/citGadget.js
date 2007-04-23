@@ -29,7 +29,7 @@ var author = "";
 var other = "";
 
 // Needs to be declared global otherwise it doesnt get recognized by the setTimeout() method
-var citePages = new Array();
+citePages = new Array();
 var pages = 0;
 
 var done = false;
