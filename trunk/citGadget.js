@@ -135,13 +135,14 @@ function getTotalResultsInfo(gAuthor, gOther){
 	           });
 	        }
 	    }
-	    setTimeout("", 3000);
+	    setTimeout("wait'citePages.length')", 3000);
 	    
 	    function wait(message){
 	        while(citePages.length < 10 && citePages.length < pages){
 	            alert(message);
 	            setTimeout("wait('citePages.length')", 3000);
             }
+            return;
         }
 	    
 	    // Calculate the total number of citations from all fetched pages
