@@ -106,12 +106,33 @@ function getTotalResultsInfo(gAuthor, gOther){
         if(pages < 10){
             for(var i = 0; i < pages; i++)
 	        {
-	            citePages[i] = getCitationCount(responseText);
+	            start = pages * 100;
+                var url_to_get = "http://scholar.google.com/scholar?as_q="+gOther+"&num="+ret_results+"&as_sauthors="+gAuthor+"&start="+start;
+  	
+                _IG_FetchContent(url_to_get, function(responseText1){
+                    if (responseText == null){
+                        _gel("sContent").innerHTML = "<i>Invalid data.</i>";
+                        alert("There is no data.");
+    	                return;
+                    }
+	                citePages[i] = getCitationCount(responseText1);
+	            }
+	            
 	        }
         }else{
             for(var i = 0; i < 10; i++)
 	        {
-	            citePages[i] = getCitationCount(responseText);
+	            start = pages * 100;
+	            var url_to_get = "http://scholar.google.com/scholar?as_q="+gOther+"&num="+ret_results+"&as_sauthors="+gAuthor+"&start="+start;
+  	
+                _IG_FetchContent(url_to_get, function(responseText2){
+                    if (responseText == null){
+                        _gel("sContent").innerHTML = "<i>Invalid data.</i>";
+                        alert("There is no data.");
+    	                return;
+                    }
+	                citePages[i] = getCitationCount(responseText2);
+	            }
 	        }
 	    }
 	    
