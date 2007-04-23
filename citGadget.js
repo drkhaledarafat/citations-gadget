@@ -134,6 +134,7 @@ function getTotalResultsInfo(gAuthor, gOther){
 	            });
 	        }
 	    }
+	    alert(citePages.length);
 	    
 	    // Calculate the total number of citations from all fetched pages
 	    var total_citations = 0;
