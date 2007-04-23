@@ -30,7 +30,7 @@
           </tr>
           <tr>
             <td>
-                <input type="text" name="inputbox" onkeypress="searchKeyUp(event)">
+                <input type="text" name="inputbox" onkeypress="searchKeyUp(event, this.form)">
             </td>
           </tr>
         </table>
@@ -45,7 +45,7 @@
           </tr>
           <tr>
             <td>
-                <input type="text" name="other_inputbox" onkeypress="searchKeyUp(event)">
+                <input type="text" name="other_inputbox" onkeypress="searchKeyUp(event, this.form)">
             </td>
           </tr>
         </table>

@@ -259,7 +259,7 @@ function getCitationCount(responseText){
 //inputBox.onkeyup = searchKeyUp;
 //otherBox.onkeyup = searchKeyUp;
 
-function searchKeyUp(evt)
+function searchKeyUp(evt, form)
 {
      // If it’s Mozilla/FF use evt; else use window.event
      evt = evt ? evt : event;
@@ -272,7 +272,7 @@ function searchKeyUp(evt)
      if(evt.keyCode == 13)
      {
           // do this if it IS the enter key
-          queryScholar(this.form);
+          queryScholar(form);
      }
      else
      {
