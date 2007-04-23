@@ -105,6 +105,7 @@ function getTotalResultsInfo(gAuthor, gOther){
     	                    return;
                         }
 	                    citePages[i] = getCitationCount(responseText1);
+	                    return;
 	                });
 	            }
 	            done = true;
@@ -120,10 +121,13 @@ function getTotalResultsInfo(gAuthor, gOther){
                             alert("There is no data.");
     	                    return;
                         }
-                        var arr = new Array();
-                        arr = getCitationCount(responseText2);
-	                    citePages[i] = arr;
+                        alert(citePages);
+                        citePages[i] = getCitationCount(responseText2);
+                       // var arr = new Array();
+                       // arr = getCitationCount(responseText2);
+	                   // citePages[i] = arr;
 	                    //alert("Getting: " + citePages[0][1]);
+	                    return;
 	               });
 	            }
 	            done = true;
