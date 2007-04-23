@@ -123,7 +123,7 @@ function getTotalResultsInfo(gAuthor, gOther){
                         var arr = new Array();
                         arr = getCitationCount(responseText2);
 	                    citePages[i] = arr;
-	                    alert("Getting: " + arr[1]);
+	                    alert("Getting: " + citePages[0][1]);
 	               });
 	            }
 	            done = true;
