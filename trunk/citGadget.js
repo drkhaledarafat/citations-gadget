@@ -32,6 +32,8 @@ var other = "";
 var citePages = new Array();
 var pages = 0;
 
+var done = false;
+
 // -----------------------
 function queryScholar(form){
 
@@ -118,8 +120,9 @@ function getTotalResultsInfo(gAuthor, gOther){
     	                return;
                     }
 	                citePages[i] = getCitationCount(responseText1);
-	            });	            
+	            });
 	        }
+	        done = true;
         }else{
             for(var i = 0; i < 10; i++)
 	        {
@@ -135,6 +138,7 @@ function getTotalResultsInfo(gAuthor, gOther){
 	                citePages[i] = getCitationCount(responseText2);
 	           });
 	        }
+	        done = true;
 	    }	    
 
 	    setTimeout("wait()", 3000);
@@ -162,20 +166,11 @@ function getTotalResultsInfo(gAuthor, gOther){
 }
 
 function wait(){
-    if(pages < 10){
-        if(citePages.length < pages){
-            alert("Waiting...: " + citePages.length);
-            setTimeout("wait()", 3000);
-        }else{
-            alert("Done: " + citePages.length);
-        }
+    if(done != true){
+        alert("Waiting...: " + citePages.length);
+        setTimeout("wait()", 3000);
     }else{
-        if(citePages.length < 10){
-            alert("Waiting...: " + citePages.length);
-            setTimeout("wait()", 3000);
-        }else{
-            alert("Done: " + citePages.length);
-        }
+        alert("Done: " + citePages.length);
     }
     return;
 }
