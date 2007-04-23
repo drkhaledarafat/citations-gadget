@@ -142,8 +142,16 @@ function getTotalResultsInfo(gAuthor, gOther){
 	    }	    
 
 	    setTimeout("wait()", 3000);
-	    
-	    // Calculate the total number of citations from all fetched pages
+    });
+}
+
+function wait(){
+    if(done != true){
+        alert("Waiting...: " + citePages.length);
+        setTimeout("wait()", 3000);
+    }else{
+        alert("Done: " + citePages.length);
+        // Calculate the total number of citations from all fetched pages
 	    var total_citations = 0;
 	    
 	    for(var i = 0; i < citePages.length; i++){
@@ -161,16 +169,6 @@ function getTotalResultsInfo(gAuthor, gOther){
         
         // Output html in div.
         _gel("sContent").innerHTML = html;
-    
-    });
-}
-
-function wait(){
-    if(done != true){
-        alert("Waiting...: " + citePages.length);
-        setTimeout("wait()", 3000);
-    }else{
-        alert("Done: " + citePages.length);
     }
     return;
 }
