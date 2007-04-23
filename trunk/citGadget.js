@@ -134,6 +134,19 @@ function getTotalResultsInfo(gAuthor, gOther){
             // Repeatedly wait until we receive all the results from the fetched pages
 	        setTimeout("wait()", 3000);
 	        
+	    }else{
+	        var url_to_get = "http://scholar.google.com/scholar?as_q="+gOther+"&num="+ret_results+"&as_sauthors="+gAuthor;
+      	
+            _IG_FetchContent(url_to_get, function(responseText3){
+                if (responseText == null){
+                    _gel("sContent").innerHTML = "<i>Invalid data.</i>";
+                    alert("There is no data.");
+                    return;
+                }                        
+                citePages[0] = getCitationCount(responseText3);
+                totalCites();
+                return;
+           });
 	    } // End of checking if more than 100 results are returned if(tResults > 100)
     });
 }
@@ -143,27 +156,31 @@ function wait(){
         alert("Waiting...: " + citePages.length);
         setTimeout("wait()", 3000);
     }else{
-        alert("Done: " + citePages.length);
-        // Calculate the total number of citations from all fetched pages
-	    var total_citations = 0;
-	    
-	    for(var i = 0; i < citePages.length; i++){
-	        var citeArray = citePages[i];	        
-    	    for(var j = 0; j < citeArray.length; j++){
-		        // The multiplication by one is a hack to convert the string type into a numerical type
-		        total_citations += citeArray[j]*1;
-	        }
-	    }
-	    
-	    // Print out the result to the screen
-	    html += "The total number of citations by " + author + " is: ";
-	    html += "<div class='citno'>" + total_citations + "</div>";	    
-	    html += "</div>";
-        
-        // Output html in div.
-        _gel("sContent").innerHTML = html;
+        // alert("Done: " + citePages.length);
+        totalCites();
     }
     return;
+}
+
+function totalCites(){
+    // Calculate the total number of citations from all fetched pages
+    var total_citations = 0;
+    
+    for(var i = 0; i < citePages.length; i++){
+        var citeArray = citePages[i];	        
+	    for(var j = 0; j < citeArray.length; j++){
+	        // The multiplication by one is a hack to convert the string type into a numerical type
+	        total_citations += citeArray[j]*1;
+        }
+    }
+    
+    // Print out the result to the screen
+    html += "The total number of citations by " + author + " is: ";
+    html += "<div class='citno'>" + total_citations + "</div>";	    
+    html += "</div>";
+    
+    // Output html in div.
+    _gel("sContent").innerHTML = html;
 }
 
 // ----------------------
@@ -193,16 +210,6 @@ function getCitationCount(responseText){
 			responseText = responseText.substr(cite_exists+cite_str_len, responseText.length);
 		}
 	}
-
-	// Sum up all citations
-//	var total_citations = 0;
-//	for(var j = 0; j<citeArray.length; j++){
-		// The multiplication by one is a hack to 
-		// convert the string type into a numerical type
-//		total_citations += citeArray[j]*1;
-//	}
-	//html += "The total number of citations by " + author + " is: ";
-	//html += "<div class='citno'>" + total_citations + "</div>";
 	return citeArray;
 }
 // ------------------------
