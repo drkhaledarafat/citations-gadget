@@ -123,7 +123,7 @@ function getTotalResultsInfo(gAuthor, gOther){
                         var arr = new Array();
                         arr = getCitationCount(responseText2);
 	                    citePages[i] = arr;
-	                    alert("Getting: " + citePages[0][1]);
+	                    //alert("Getting: " + citePages[0][1]);
 	               });
 	            }
 	            done = true;
@@ -147,6 +147,7 @@ function wait(){
 	    
 	    for(var i = 0; i < citePages.length; i++){
 	        var citeArray = citePages[i];
+	        alert(citeArray);
     	    for(var j = 0; j < citeArray.length; j++){
 		        // The multiplication by one is a hack to convert the string type into a numerical type
 		        total_citations += citeArray[j]*1;
