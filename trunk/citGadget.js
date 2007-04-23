@@ -185,10 +185,10 @@ function totalCites(){
     }
     
     // Print out the result to the screen
-    html += "<div class='stat'>Statistics:</div><br>";
-    html += "Publications: " + + "<br>";
-    html += "The total number of citations by " + author + " is: ";
-    html += "<div class='citno'>" + total_citations + "</div>";	    
+    html += "<div class='stats'>Statistics:</div><br />";
+    html += "Publications: " + publications + "<br />";
+    html += "Citations for " + author + ": ";
+    html += "<div class='citno'>" + total_citations + "</div><br />";	    
     html += "</div>";
     
     // Output html in div.
