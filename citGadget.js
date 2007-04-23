@@ -135,7 +135,7 @@ function getTotalResultsInfo(gAuthor, gOther){
 	           });
 	        }
 	    }
-	    setTimeout("wait'citePages.length')", 3000);
+	    setTimeout("wait('citePages.length')", 3000);
 	    
 	    function wait(message){
 	        while(citePages.length < 10 && citePages.length < pages){
