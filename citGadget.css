@@ -69,7 +69,7 @@ html, body {
     color: yellow;
 }
 
-.loading
+#loading
 {
     display: inline;
 }
