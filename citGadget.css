@@ -68,3 +68,8 @@ html, body {
     font-style: italic;
     color: yellow;
 }
+
+.loading
+{
+    display: none;
+}
