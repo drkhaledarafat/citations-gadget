@@ -68,6 +68,10 @@
         <a href="http://code.google.com/p/citations-gadget/" target="_blank"> Project Page </a>
       </div>
 
+      <script type="text/javascript">
+        // Resize the frame
+        _IG_AdjustIFrameHeight();
+      </script>
     </FORM>
     <!--<div id="sContent"></div> //-->
     ]]>

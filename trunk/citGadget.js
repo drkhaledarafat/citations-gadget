@@ -40,9 +40,6 @@ function queryScholar(form){
     // Display loading icon first
     document.getElementById("loading").style.display="inline";
     
-    // Resize the frame
-    _IG_AdjustIFrameHeight();
-    
 	// HTML variable to generate html code to be printed out
 	html = "";
 
