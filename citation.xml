@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-  <ModulePrefs title="Scholar Citation Counter" scrolling="false" height="300">
+  <ModulePrefs title="Scholar Citation Counter" scrolling="false" height="160">
     <Require feature="dynamic-height"/>
   </ModulePrefs>
   <Content type="html">
@@ -64,7 +64,7 @@
       </div>
 
       <div class="copyright">
-        <a>Copyright - Jan Feyereisl</a>&nbsp&nbsp
+        <a>Copyright - Jan Feyereisl (v.1.0)</a>&nbsp&nbsp&nbsp
         <a href="http://code.google.com/p/citations-gadget/" target="_blank"> Project Page </a>
       </div>
 
