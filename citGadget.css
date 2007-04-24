@@ -99,6 +99,7 @@ html, body {
 .link
 {
     float: right;
+    margin-bottom: -14px;
     margin-top: -16px;
     margin-left: 15em;
     text-align: right;
