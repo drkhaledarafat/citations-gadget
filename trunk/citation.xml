@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-  <ModulePrefs title="Scholar Citation Counter" scrolling="false" height="160">
+  <ModulePrefs title="Scholar Citation Counter" scrolling="false" height="300">
     <Require feature="dynamic-height"/>
   </ModulePrefs>
   <Content type="html">
