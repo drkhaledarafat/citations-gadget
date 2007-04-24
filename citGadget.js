@@ -192,7 +192,8 @@ function totalCites(){
     html += "<div class='stats'>Statistics:</div><br />";
     html += "Citations for '<div class='sTerm'>" + author + "</div>' : <div class='citno'>" + total_citations + "</div><br />";
     html += "Cited Publications: <div class='citno'>" + publications + "</div><br />";
-    html += "H-Index: <div class='citno'>" + h_index() + "</div><br />";        
+    html += "H-Index: <div class='citno'>" + h_index() + "</div><br />";
+    html += "<a class='link' href='http://scholar.google.com/scholar?as_q=" + gOther + "&as_sauthors=" + gAuthor + "' target='_blank'>link..</a><br />";
     html += "</div>";
     
     // Output html in div.
