@@ -98,10 +98,7 @@ html, body {
 
 .link
 {
-    float: right;
-    margin-bottom: -14px;
-    margin-top: -16px;
-    margin-left: 15em;
+    float: right;    
     text-align: right;
     text-decoration: none;
     display: block;

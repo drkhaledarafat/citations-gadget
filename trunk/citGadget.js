@@ -1,5 +1,5 @@
 /* --------------------------------*/
-/* Created by Jan Feyereisl - 2006 */
+/* Created by Jan Feyereisl - 2007 */
 /* --------------------------------*/
 // LIMITATIONS:
 // This gadget calls Google Scholar in the same fashion as a web-browser would
