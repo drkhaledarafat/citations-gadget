@@ -59,13 +59,11 @@
       </div>
 
       <div class="footer">
-        <a href="http://scholar.google.com" target="_blank">
-          scholar.google.com
-        </a>
+        <a href="http://scholar.google.com" target="_blank">scholar.google.com</a>
       </div>
 
       <div class="copyright">
-        <a>Copyright - Jan Feyereisl</a>&nbsp
+        <a>Copyright - Jan Feyereisl</a>&nbsp&nbsp
         <a href="http://code.google.com/p/citations-gadget/" target="_blank"> Project Page </a>
       </div>
 
