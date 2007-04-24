@@ -39,7 +39,9 @@ function queryScholar(form){
 
     // Display loading icon first
     document.getElementById("loading").style.display="inline";
-
+    // Display the results box
+    document.getElementById("sContent").style.display="block";
+    
 	// HTML variable to generate html code to be printed out
 	html = "";
 

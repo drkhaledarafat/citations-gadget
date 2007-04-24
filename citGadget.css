@@ -4,9 +4,16 @@ html, body {
     margin: 5px;
 }
 
-.instructions {
+.instructions
+{
     font-size: 12px;
     margin-bottom: 10px;
+    background-color: #FFF4C2;
+    border-right: 1px solid;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    padding: 3px;
 }
 
 #sContent
@@ -18,6 +25,7 @@ html, body {
     border-left: #000000 1px solid;
     border-bottom: #000000 1px solid;
     font-size: 10pt;
+    display: none;
 }
 
 .citno
