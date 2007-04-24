@@ -2,6 +2,7 @@
 <Module>
   <ModulePrefs title="Scholar Citation Counter" scrolling="false" height="160">
     <Require feature="dynamic-height"/>
+    <Require feature="analytics"/>
   </ModulePrefs>
   <Content type="html">
     <![CDATA[
@@ -12,6 +13,11 @@
 
     <!-- Main part of HTML code //-->
     <FORM NAME="cite" ACTION="" METHOD="GET">
+
+      <!-- Google Analytics Code -->
+      <script>
+        _IG_Analytics("UA-1727879-1", "/citGadget");
+      </script>
 
       <div class="instructions">
         A Google Scholar gadget for calculating author citations and other statistical information regarding publications.
