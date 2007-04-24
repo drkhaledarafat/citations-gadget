@@ -100,8 +100,9 @@ html, body {
 {
     margin-bottom: -15px;
     margin-top: -16px;
-    margin-left: 320px;
+    margin-left: 230px;
     text-align: right;
     text-decoration: none;
     display: block;
+    font-size: 10px;
 }
