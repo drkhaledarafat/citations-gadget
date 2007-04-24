@@ -15,6 +15,7 @@
 
       <div class="instructions">
         A Google Scholar gadget for calculating author citations and other statistical information regarding publications.
+        <a href="http://code.google.com/p/citations-gadget/" target="_blank">more...</a>
       </div>
 
       <!-- The dynamically generated code is inserted here //-->
@@ -40,7 +41,7 @@
         <table>
           <tr>
             <td>
-              + Other
+              + Other:
             </td>
           </tr>
           <tr>
