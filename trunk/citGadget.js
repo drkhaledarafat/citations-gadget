@@ -202,6 +202,9 @@ function totalCites(){
     
     // Hide loading icon first
     document.getElementById("loading").style.display="none";
+    
+    // Resize the frame
+    _IG_AdjustIFrameHeight();
 
 }
 
