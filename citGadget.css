@@ -102,4 +102,5 @@ html, body {
     margin-top: -16px;
     text-align: right;
     text-decoration: none;
+    display: block;
 }
