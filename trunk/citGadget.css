@@ -95,3 +95,9 @@ html, body {
     display: none;
     vertical-align: middle;
 }
+
+a .link
+{
+    display: inline;
+    text-align: right;
+}
