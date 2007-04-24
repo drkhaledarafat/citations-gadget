@@ -98,6 +98,8 @@ html, body {
 
 .link
 {
-    display: inline;
+    margin-bottom: -15px;
+    margin-top: -16px;
     text-align: right;
+    text-decoration: none;
 }
