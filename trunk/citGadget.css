@@ -34,14 +34,19 @@ html, body {
     color: Blue;
 }
 
-.author{
+.author
+{
     display: inline;
     float: left;
+    font-size: 10pt;
+    font-weight: bold;
 }
 
 .other {
     display: inline;
     float: left;
+    font-size: 10pt;
+    font-weight: bold;
 }
 
 .clear {
