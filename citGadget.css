@@ -98,7 +98,7 @@ html, body {
 
 .link
 {
-    
+    float: right;
     margin-top: -16px;
     margin-left: 15em;
     text-align: right;
