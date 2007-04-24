@@ -49,6 +49,12 @@ html, body {
     font-weight: bold;
 }
 
+.author td, .other td
+{
+    font-size: 10pt;
+    font-weight: bold;
+}
+
 .clear {
     clear: both;
 }
