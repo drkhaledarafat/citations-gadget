@@ -33,6 +33,8 @@ var citePages = new Array();
 var publications = 0;
 var pages = 0;
 var done = false;
+var gAuthor = "";
+var gOther = "";
 
 // -----------------------
 function queryScholar(form){
@@ -52,7 +54,9 @@ function queryScholar(form){
     ret_results = 100;
     author = "";
     other = "";
-
+    gAuthor = "";
+    gOther = "";
+	
 	// Variable holding the name of the author to be searched
     author = form.inputbox.value;	
 	// Variable which stores other search terms besides the author's name
@@ -60,8 +64,8 @@ function queryScholar(form){
 	
 	// Convert search string into the correct Google search format 
 	// (e.g. add "+" in-between search terms in order for Boolean operations to work)
-  	var gAuthor = author.replace(/ /gi, "+");
-  	var gOther = other.replace(/ /gi, "+");
+  	gAuthor = author.replace(/ /gi, "+");
+    gOther = other.replace(/ /gi, "+");
   	// End of global variables declaration
   	
   	// Fetch Information about total number of results returned by Google
