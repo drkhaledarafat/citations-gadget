@@ -93,4 +93,5 @@ html, body {
 #loading
 {
     display: none;
+    vertical-align: middle;
 }
