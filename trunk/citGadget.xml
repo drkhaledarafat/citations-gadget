@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <ModulePrefs title="Google Scholar Citation Counter"
+               description="A gadget which enables users to search for the total number of citations of author(s). It provides a total citation count, total number of cited publications and Jorge E. Hirsch's H-Index" 
+               author="Jan Feyereisl" 
+               author_email="thefillm+citGadget@googlemail.com"
+               screenshot="http://citations-gadget.googlecode.com/svn/trunk/citGadget.png"
+               thumbnail="http://citations-gadget.googlecode.com/svn/trunk/citGadgetThumb.png" 
+               author_location="Nottingham, UK" 
+               author_affiliation="University of Nottingham" 
+               author_link="http://cs.nott.ac.uk/~jqf" 
+               scrolling="false" 
+               height="160">
+    <Require feature="dynamic-height"/>
+    <Require feature="analytics"/>
+  </ModulePrefs>
+  <Content type="html">
+    <![CDATA[
+
+    <script src="http://citations-gadget.googlecode.com/svn/trunk/citGadget.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="http://citations-gadget.googlecode.com/svn/trunk/citGadget.css" />
+
+    <!-- Main part of HTML code //-->
+    <FORM NAME="cite" ACTION="" METHOD="GET">
+
+      <!-- Google Analytics Code -->
+      <script>
+        _IG_Analytics("UA-1727879-2", "/citGadget");
+      </script>
+
+      <div class="instructions">
+        A Google Scholar gadget for calculating author citations and other statistical information regarding publications.
+        <a href="http://code.google.com/p/citations-gadget/" target="_blank">more...</a>
+      </div>
+
+      <!-- The dynamically generated code is inserted here //-->
+        <div id="sContent"></div>
+      <!-- </div> //-->
+
+      <div class="author">
+        <table>
+          <tr>
+            <td>
+              Author:
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <input type="text" name="inputbox" onkeypress="searchKeyUp(event, this.form)">
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="other">
+        <table>
+          <tr>
+            <td>
+              + Other:
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <input type="text" name="other_inputbox" onkeypress="searchKeyUp(event, this.form)">
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="clear"></div>
+
+      <div class="submit">    
+        <input type="button" name="Submit" value="Submit" onClick="queryScholar(this.form)" />
+        <img id="loading" src="http://citations-gadget.googlecode.com/svn/trunk/citGadgetLoading.gif" />
+      </div>
+
+      <div class="footer">
+        <a href="http://scholar.google.com" target="_blank">scholar.google.com</a>
+      </div>
+
+      <div class="copyright">
+        <a>Copyright - Jan Feyereisl (v.1.0)</a>&nbsp&nbsp&nbsp
+        <a href="http://code.google.com/p/citations-gadget/" target="_blank"> Project Page </a>
+      </div>
+
+      <script type="text/javascript">
+        // Resize the frame
+        _IG_AdjustIFrameHeight();
+      </script>
+    </FORM>
+    <!--<div id="sContent"></div> //-->
+    ]]>
+  </Content>
+</Module>
