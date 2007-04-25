@@ -5,8 +5,11 @@
 
 Instructions for a number of ways to install and use Citation Gadget.
 
+== Using Google Content Directory ==
 
-== Personalised Google Home Page ==
+
+
+== Using Personalised Google Home Page ==
 
 First of all it is advisable but not necessary to create a Google account (Any e-mail address is sufficient for this - no gmail account is required). This way the personalised Google home page will be available any time you log in to Google and not only on the computer that you personalise the home page on, as described below.
 
