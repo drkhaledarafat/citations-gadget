@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Installation Instructions
 #labels Phase-Deploy
 
 = Installation Instructions =
@@ -12,10 +12,10 @@ First of all it is advisable but not necessary to create a Google account (Any e
 
 If you have never used Google personalised home page:
 
-# Go to www.google.com (Log in if you have an account)
-# In the right top corner of the page, click on "Personalised Home"
-# Next Click on "Make it your own" text, located underneath the Google search input field and "Google search" button.
-# Next click on "the entire collection" highlighted text in the same position as in previous section. (Below "Google search" button)
+  # Go to www.google.com (Log in if you have an account)
+  # In the right top corner of the page, click on "Personalised Home"
+  # Next Click on "Make it your own" text, located underneath the Google search input field and "Google search" button.
+  # Next click on "the entire collection" highlighted text in the same position as in previous section. (Below "Google search" button)
 # In the top part of the page next to the "Search Homepage Content" button, click on "Add by URL" highlighted text.
 # This will reveal a new window titled "Add by URL".
 # In the box provided insert the following URL:
