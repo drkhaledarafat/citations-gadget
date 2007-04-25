@@ -8,7 +8,7 @@ Instructions for a number of ways to install and use Citation Gadget.
 == Automatic Addition Using "Add to Google" ==
 This is the easiest way to add the gadget. Simply click on the following image and follow the instructions displayed.
 
-[http://fusion.google.com/add?moduleurl=http%3A//citations-gadget.googlecode.com/svn/trunk/citation.xml http://buttons.googlesyndication.com/fusion/add.gif]
+[http://fusion.google.com/add?moduleurl=http%3A//citations-gadget.googlecode.com/svn/trunk/citGadget.xml http://buttons.googlesyndication.com/fusion/add.gif]
 
 == Using Personalised Google Home Page ==
 (Verbose instruction for manually adding the Citation Gadget)
