@@ -23,7 +23,7 @@ If you have never used Google personalised home page:
   # Next click on "the entire collection" highlighted text in the same position as in previous section. (Below "Google search" button)
   # In the top part of the page next to the "Search Homepage Content" button, click on "Add by URL" highlighted text.
   # This will reveal a new window titled "Add by URL".
-  # In the box provided insert the following URL: http://citations-gadget.googlecode.com/svn/trunk/citation.xml
+  # In the box provided insert the following URL: http://citations-gadget.googlecode.com/svn/trunk/citGadget.xml
   # Now click on the "Add" button right next to the input box.
   # A dialog window will appear asking if you wish to add content not created by Google. Click on the "Ok" button to confirm.
   # If the addition was unsuccessful, an orange tick icon will be displayed in the "Add by URL" window.
