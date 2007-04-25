@@ -26,7 +26,7 @@ If you have never used Google personalised home page:
   # In the box provided insert the following URL: http://citations-gadget.googlecode.com/svn/trunk/citGadget.xml
   # Now click on the "Add" button right next to the input box.
   # A dialog window will appear asking if you wish to add content not created by Google. Click on the "Ok" button to confirm.
-  # If the addition was unsuccessful, an orange tick icon will be displayed in the "Add by URL" window.
+  # If the addition was successful, an orange tick icon will be displayed in the "Add by URL" window.
   # Now click on "Back to homepage" in the top left corner of the website in order to return to your personalised home page.
 
 If you have used Google personalised home page before:
