@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-  <ModulePrefs title="Scholar Citation Counter" scrolling="false" height="160">
+  <ModulePrefs title="Google Scholar Citation Counter"
+               description="A gadget which enables users to search for the total number of citations of author(s). It provides a total citation count, total number of cited publications and Jorge E. Hirsch's H-Index" 
+               author="Jan Feyereisl" 
+               author_email="thefillm+citGadget@googlemail.com"
+               screenshot="http://citations-gadget.googlecode.com/svn/trunk/citGadget.png"
+               thumbnail="http://citations-gadget.googlecode.com/svn/trunk/citGadgetThumb.png" 
+               author_location="Nottingham, UK" 
+               author_affiliation="University of Nottingham" 
+               author_link="http://cs.nott.ac.uk/~jqf" 
+               scrolling="false" 
+               height="160">
     <Require feature="dynamic-height"/>
     <Require feature="analytics"/>
   </ModulePrefs>
