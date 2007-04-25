@@ -1,0 +1,32 @@
+#summary Installation Instructions
+#labels Phase-Deploy
+
+= Installation Instructions =
+
+Instructions for a number of ways to install and use Citation Gadget.
+
+
+== Personalised Google Home Page ==
+
+First of all it is advisable but not necessary to create a Google account (Any e-mail address is sufficient for this - no gmail account is required). This way the personalised Google home page will be available any time you log in to Google and not only on the computer that you personalise the home page on, as described below.
+
+If you have never used Google personalised home page:
+
+  # Go to [http://www.google.com Google Home] (Log in if you have an account)
+  # In the right top corner of the page, click on "Personalised Home"
+  # Next Click on "Make it your own" text, located underneath the Google search input field and "Google search" button.
+  # Next click on "the entire collection" highlighted text in the same position as in previous section. (Below "Google search" button)
+  # In the top part of the page next to the "Search Homepage Content" button, click on "Add by URL" highlighted text.
+  # This will reveal a new window titled "Add by URL".
+  # In the box provided insert the following URL: http://citations-gadget.googlecode.com/svn/trunk/citation.xml
+  # Now click on the "Add" button right next to the input box.
+  # A dialog window will appear asking if you wish to add content not created by Google. Click on the "Ok" button to confirm.
+  # If the addition was unsuccessful, an orange tick icon will be displayed in the "Add by URL" window.
+  # Now click on "Back to homepage" in the top left corner of the website in order to return to your personalised home page.
+
+If you have used Google personalised home page before:
+
+  # Go to [http://www.google.com Google Home] (Log in if you have an account)
+  # Make sure you are using the personalised home page. If not, then in the right top corner of the page, click on "Personalised Home"
+  # Next click on "Add stuff" text in the upper right hand side of the website.
+  # Now follow the above guide from number 5 onwards.
