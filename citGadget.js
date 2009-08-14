@@ -9,10 +9,8 @@
 // The position of the author is not taken into account.
 // Citation is calculated as long as the searched person is one of the named authors on the paper.
 
-// !ISSUE! - When pressing the 'enter' key - wrong operation is performed
+// !ISSUE! - 'enter' key has an issue in Googgle Chrome Browser
 // !ISSUE! - Assumes that the number of citations per paper does not exceed 9999
-// !ISSUE! - Only 100 papers can be returned per page and the citation calculation
-//	     is only done on citations in the first returned page!!
 // When using or - the operation has to be in capital letters if in "other" search term box
 
 // HTML variable to generate html code to be printed out
@@ -89,14 +87,11 @@ function getTotalResultsInfo(gAuthor, gOther){
 
         // Variables used to find the correct location of the total number of returned results
         var pre = 'of about <b>';
-        //var post1 = "</b>\\.   \\(<b>";
 		var post = /<\/b>\.\s*\(<b>/;
-		//post = post1.toString();
         
         // Locate the place where the total results value is positioned
         var resultPositionPre = responseText.search(pre) + pre.length;
         var resultPositionPost = responseText.search(post);
-		alert("post:" + resultPositionPost);
         var resultLength = resultPositionPost - resultPositionPre;
         
         // Extract the total number of results returned
