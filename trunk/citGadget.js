@@ -97,6 +97,7 @@ function getTotalResultsInfo(gAuthor, gOther){
         var resultPositionPre = responseText.search(pre) + pre.length;
         var resultPositionPost = responseText.search(post);
 		alert("post:" + resultPositionPost);
+		alert(responseText);
         var resultLength = resultPositionPost - resultPositionPre;
         
         // Extract the total number of results returned
