@@ -89,7 +89,7 @@ function getTotalResultsInfo(gAuthor, gOther){
 
         // Variables used to find the correct location of the total number of returned results
         var pre = 'of about <b>';
-        var post = '</b> for <b>';
+        var post = '</b>.   (<b>';
         
         // Locate the place where the total results value is positioned
         var resultPositionPre = responseText.search(pre) + pre.length;
@@ -273,7 +273,7 @@ function getCitationCount(responseText){
 function searchKeyUp(evt, form)
 {
      // If it’s Mozilla/FF use evt; else use window.event
-     evt = evt ? evt : event;
+     //evt = evt ? evt : event;
 
      var keyCode = evt.keyCode;
 
@@ -281,6 +281,7 @@ function searchKeyUp(evt, form)
      // alert(evt.keyCode);
 
      if(evt.keyCode == 13)
+	 //if(evt.keyIdentifier == "Enter")
      {
           // do this if it IS the enter key
           queryScholar(form);
