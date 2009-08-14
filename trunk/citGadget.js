@@ -90,12 +90,13 @@ function getTotalResultsInfo(gAuthor, gOther){
         // Variables used to find the correct location of the total number of returned results
         var pre = 'of about <b>';
         //var post1 = "</b>\\.   \\(<b>";
-		var post = /<\\b>\. \(<b>/;
+		var post = /<\\b>\.\s*\(<b>/;
 		//post = post1.toString();
         
         // Locate the place where the total results value is positioned
         var resultPositionPre = responseText.search(pre) + pre.length;
         var resultPositionPost = responseText.search(post);
+		alert("post:" + resultPositionPost);
         var resultLength = resultPositionPost - resultPositionPre;
         
         // Extract the total number of results returned
