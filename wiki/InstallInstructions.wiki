@@ -5,6 +5,8 @@
 
 Instructions for a number of ways to install and use Citation Gadget.
 
+<wiki:gadget url="http://code.google.com/p/citations-gadget/source/browse/trunk/citGadget.xml" up_projectName="CitGadget" />
+
 == Automatic Addition Using "Add to Google" ==
 This is the easiest way to add the gadget. Simply click on the following image and follow the instructions displayed.
 
