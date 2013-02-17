@@ -106,17 +106,22 @@
 				}
 
 				// Variables used to find the correct location of the total number of returned results
-				var pre = 'of about <b>';
-				var post = /<\/b>\.\s*\(<b>/;
+				var pre = '">About';
+				var post = 'results (<b>';
+				//var post = /<\/b>\.\s*\<b>/;
 				
 				// Locate the place where the total results value is positioned
 				var resultPositionPre = responseText.search(pre) + pre.length;
 				var resultPositionPost = responseText.search(post);
 				var resultLength = resultPositionPost - resultPositionPre;
+				alert(resultPositionPre);
+				alert(resultPositionPost);
+				alert(resultLength);
 				
 				// Extract the total number of results returned
 				var tResults = responseText.substr(resultPositionPre, resultLength);
 				alert(tResults);
+				
 				// Remove the comma representing thousands - it prevents js to treat the string as a number       
 				while(tResults.search(',') != -1){
 					tResults = tResults.substr(0, tResults.search(',')) + tResults.substr(tResults.search(',')+1, tResults.length);
