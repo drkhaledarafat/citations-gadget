@@ -100,9 +100,16 @@
 			var url_to_get = "http://scholar.google.com/"
 			
 			// edit
-			params[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.GET;
-			gadgets.io.makeRequest(url_to_get, response, params); 
-			alert(response);
+			function makeGETRequest(url_to_get) {
+			   var params = {};
+			   params[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.GET;
+			   gadgets.io.makeRequest(url, response, params); 
+			};
+			function response(obj) {
+				alert(obj.text); 
+			};
+			
+			makeGETRequest(url_to_get); 
 			//edit
 			
 			
