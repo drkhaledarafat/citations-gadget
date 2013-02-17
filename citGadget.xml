@@ -107,7 +107,7 @@
 
 				// Variables used to find the correct location of the total number of returned results
 				var pre = '\">About';
-				var post = 'results (<b>';
+				var post = "results (<b>";
 				//var post = /<\/b>\.\s*\<b>/;
 				
 				// Locate the place where the total results value is positioned
