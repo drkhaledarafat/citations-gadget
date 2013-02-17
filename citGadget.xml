@@ -436,7 +436,8 @@
       </script>
 
       <div class="instructions">
-	    <b>NEWS</b>: Unfortunately Google disallowed fetching their Scholar data. A workaround needs to be found first, before the gadget will work again.<br>
+	    <b>NOTICE</b>: <it>Unfortunately Google disallowed fetching their Scholar data. A workaround needs to be found first, before the gadget will work again.</it><br>
+		<br>
         A Google Scholar gadget for calculating author citations and other statistical information regarding publications.
         <a href="http://code.google.com/p/citations-gadget/" target="_blank">more...</a>
       </div>
