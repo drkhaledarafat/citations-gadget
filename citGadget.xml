@@ -106,7 +106,7 @@
 			   gadgets.io.makeRequest(url, response, params); 
 			};
 			function response(obj) {
-				alert(obj.text); 
+				alert(obj); 
 			};
 			
 			makeGETRequest(url_to_get); 
