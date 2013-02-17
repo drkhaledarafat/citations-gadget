@@ -1,0 +1,106 @@
+
+html, body {
+    background-color: #E5ECF9;
+    margin: 5px;
+}
+
+.instructions
+{
+    font-size: 12px;
+    margin-bottom: 10px;
+    background-color: #FFF4C2;
+    border-right: 1px solid;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    padding: 3px;
+}
+
+#sContent
+{
+    background-color: White;
+    margin-bottom: 10px;
+    border-right: #000000 1px solid;
+    border-top: #000000 1px solid;
+    border-left: #000000 1px solid;
+    border-bottom: #000000 1px solid;
+    font-size: 10pt;
+    display: none;
+}
+
+.citno
+{
+    display: inline;
+    color: Blue;
+}
+
+.author
+{
+    display: inline;
+    float: left;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.other {
+    display: inline;
+    float: left;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.author td, .other td
+{
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.clear {
+    clear: both;
+}
+
+.submit {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.footer {
+    display: inline;
+    font-size: 10px;          
+}
+
+.copyright {
+    display: inline;
+    font-size: 10px;
+    margin-left: 10px;          
+}
+
+.stats
+{
+    background-color: #3366CC;
+    font-size: 12px;
+    color: White;
+    border-bottom: black 1px solid;
+}
+
+.sTerm
+{
+    display: inline;
+    font-style: italic;
+    color: red;
+}
+
+#loading
+{
+    display: none;
+    vertical-align: middle;
+}
+
+.link
+{
+    float: right;    
+    text-align: right;
+    text-decoration: none;
+    display: block;
+    font-size: 10px;
+}
