@@ -109,7 +109,7 @@
 				var pre = '\">About';
 				var post = /results \(\<b>/;
 				//var post = /<\/b>\.\s*\<b>/;
-				
+				alert(responseText);
 				// Locate the place where the total results value is positioned
 				var resultPositionPre = responseText.search(pre) + pre.length;
 				var resultPositionPost = responseText.search(post);
