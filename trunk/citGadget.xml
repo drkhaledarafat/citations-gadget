@@ -96,7 +96,8 @@
 		function getTotalResultsInfo(gAuthor, gOther){    
 			
 			// Generate correct http request
-			var url_to_get = "http://scholar.google.com/scholar?as_q="+gOther+"&num="+ret_results+"&as_sauthors="+gAuthor;			
+			//var url_to_get = "http://scholar.google.com/scholar?as_q="+gOther+"&num="+ret_results+"&as_sauthors="+gAuthor;			
+			var url_to_get = "http://www.google.com/"
 			
 			_IG_FetchContent(url_to_get, function(responseText){
 				if (responseText == null){
