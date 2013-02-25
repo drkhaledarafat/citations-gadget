@@ -16,19 +16,7 @@
   </ModulePrefs>
   <Content type="html">
     <![CDATA[
-	#{javascript:
-		var url:java.net.URL = new java.net.URL("http://google.com");
-		url.openConnection();
-		var is:java.io.InputStream = url.openStream();
-		var c;
-		var result = "";
-		while( (c = is.read()) != (-1) ){
-			result += @Char(c);
-		}
-		is.close();
-		alert(result);
-	}
-
+	
     <script type="text/javascript">
 		/* --------------------------------*/
 		/* Created by Jan Feyereisl - 2007 */
